@@ -15,29 +15,30 @@
         <li class="active">Machine Pro</li>
     </ol>
     <!-- Block  Breadcrumb-->
-    <div class="row"> 
+    <div class="row">
+
       <!-- Main Content -->
       <div class="col-md-9 col-md-push-3  col-main">
         <div class="row">                    
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="product-media media-horizontal">
                     <div class="image_preview_container images-large">
-                        <img id="img_zoom" data-zoom-image="images/media/detail/thumb-lag1.jpg" src="images/media/detail/thumb-img1.jpg" alt="">
+                        <img id="img_zoom" data-zoom-image="{{asset('assets/front/images/media/detail/thumb-lag1.jpg')}}" src="{{asset('assets/front/images/media/detail/thumb-img1.jpg')}}" alt="">
                         <button class="btn-zoom open_qv"><span>zoom</span></button>
                     </div>                                    
                     <div class="product_preview images-small">
                         <div class="owl-carousel thumbnails_carousel" id="thumbnails"  data-nav="true" data-dots="false" data-margin="10" data-responsive='{"0":{"items":3},"480":{"items":4},"600":{"items":5},"768":{"items":3}}'>                   
-                            <a href="#" data-image="images/media/detail/thumb-img1.jpg" data-zoom-image="images/media/detail/thumb-lag1.jpg">
-                                <img src="images/media/detail/thumb1.jpg" data-large-image="images/media/detail/thumb-img1.jpg" alt="">
+                            <a href="#" data-image="{{asset('assets/front/images/media/detail/thumb-img1.jpg')}}" data-zoom-image="{{asset('assets/front/images/media/detail/thumb-lag1.jpg')}}">
+                                <img src="{{asset('assets/front/images/media/detail/thumb1.jpg')}}" data-large-image="{{asset('assets/front/images/media/detail/thumb-img1.jpg')}}" alt="">
                             </a>
-                            <a href="#" data-image="images/media/detail/thumb-img2.jpg" data-zoom-image="images/media/detail/thumb-lag2.jpg">
-                                <img src="images/media/detail/thumb2.jpg" data-large-image="images/media/detail/thumb-img2.jpg" alt="">
+                            <a href="#" data-image="{{asset('assets/front/images/media/detail/thumb-img2.jpg')}}" data-zoom-image="{{asset('assets/front/images/media/detail/thumb-lag2.jpg')}}">
+                                <img src="{{asset('assets/front/images/media/detail/thumb2.jpg')}}" data-large-image="{{asset('assets/front/images/media/detail/thumb-img2.jpg')}}" alt="">
                             </a>
-                            <a href="#" data-image="images/media/detail/thumb-img3.jpg" data-zoom-image="images/media/detail/thumb-lag3.jpg">
-                                <img src="images/media/detail/thumb3.jpg" data-large-image="images/media/detail/thumb-img3.jpg" alt="">
+                            <a href="#" data-image="{{asset('assets/front/images/media/detail/thumb-img3.jpg')}}" data-zoom-image="{{asset('assets/front/images/media/detail/thumb-lag3.jpg')}}">
+                                <img src="{{asset('assets/front/images/media/detail/thumb3.jpg')}}" data-large-image="{{asset('assets/front/images/media/detail/thumb-img3.jpg')}}" alt="">
                             </a>
-                            <a href="#" data-image="images/media/detail/thumb-img1.jpg" data-zoom-image="images/media/detail/thumb-lag1.jpg">
-                                <img src="images/media/detail/thumb1.jpg" data-large-image="images/media/detail/thumb-img1.jpg" alt="">
+                            <a href="#" data-image="{{asset('assets/front/images/media/detail/thumb-img1.jpg')}}" data-zoom-image="{{asset('assets/front/images/media/detail/thumb-lag1.jpg')}}">
+                                <img src="{{asset('assets/front/images/media/detail/thumb1.jpg')}}" data-large-image="{{asset('assets/front/images/media/detail/thumb-img1.jpg')}}" alt="">
                             </a>
 
                         </div><!--/ .owl-carousel-->
@@ -59,10 +60,9 @@
                         </div>
                         <div class="reviews-actions">
                             <a href="#" class="action view">Based  on 3 ratings</a>
-                            <a href="#" class="action add"><img alt="img" src="images/icon/write.png">&#160;&#160;write a review</a>
+                            <a href="#" class="action add"><img alt="img" src="{{asset('assets/front/images/icon/write.png')}}">&#160;&#160;write a review</a>
                         </div>
-                    </div>
-                   
+                    </div>                   
                     <div class="product-info-price">
                         <div class="price-box">
                             <span class="price">$38.95   </span>
@@ -86,13 +86,10 @@
                             Vestibulum eu odio. Suspendisse potenti. Morbi mollis tellus ac sapien. Praesent egestas tristique nibh. Nullam dictum felis eu pede mollis pretium. Fusce egestas elit eget lorem. 
                         </div>
                     </div>
-
                     <div class="product-add-form">
                         <p>Available Options:</p>
                         <form>
-
                             <div class="product-options-wrapper">
-
                                 <div class="swatch-opt">
                                     <div class="swatch-attribute color" >
                                         <span class="swatch-attribute-label">Color:</span>
@@ -148,7 +145,6 @@
                                 </div>
                                
                             </div>
-
                         </form>
                     </div>
                     <div class="product-addto-links-second">
@@ -156,7 +152,7 @@
                         <a href="#" class="action action-friend">Send to a friend</a>
                     </div>
                     <div class="share">
-                        <img src="images/media/index1/share.png" alt="share">
+                        <img src="{{asset('assets/front/images/media/index1/share.png')}}" alt="share">
                     </div>
                 </div><!-- detail- product -->
             </div><!-- Main detail -->
@@ -238,7 +234,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/related2-1.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/related2-1.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -271,7 +267,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/related2-2.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/related2-2.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -303,7 +299,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/related2-3.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/related2-3.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -335,7 +331,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/related2-1.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/related2-1.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -378,7 +374,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/Upsell2-1.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/Upsell2-1.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -410,7 +406,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/Upsell2-2.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/Upsell2-2.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -442,7 +438,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/Upsell2-3.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/Upsell2-3.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -474,7 +470,7 @@
                     <li class="product-item product-item-opt-2">
                         <div class="product-item-info">
                             <div class="product-item-photo">
-                                <a href="#" class="product-item-img"><img src="images/media/detail/Upsell2-3.jpg" alt="product name"></a>
+                                <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/Upsell2-3.jpg')}}" alt="product name"></a>
                                 <div class="product-item-actions">
                                     <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                     <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -508,10 +504,10 @@
             </div>
         </div><!-- block-Upsell Products -->
       </div>
-      <!-- Main Content -->                    
+      <!-- Main Content -->
+
       <!-- Sidebar -->
       <div class=" col-md-3 col-md-pull-9   col-sidebar">
-
           <!-- Block  bestseller products-->
           <div class="block-sidebar block-sidebar-categorie">
               <div class="block-title">
@@ -525,7 +521,6 @@
                           <ul class="subcategory">
                               <li >
                                   <a href="#">subcategory 1</a>
-                                  
                               </li>
                               <li><a href="#">subcategory 1</a></li>
                               <li><a href="#">subcategory 1</a></li>
@@ -544,50 +539,11 @@
                               <li><a href="#">subcategory 1</a></li>
                               <li><a href="#">subcategory 1</a></li>
                           </ul>
-                      </li>
-                      <li class="parent">
-                          <a href="#">Beauty</a>
-                          <span class="toggle-submenu"></span>
-                          <ul class="subcategory">
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                          </ul>
-                      </li>
-                      <li class="parent">
-                          <a href="#">Jewellery</a>
-                          <span class="toggle-submenu"></span>
-                          <ul class="subcategory">
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                          </ul>
-                      </li>
-                      <li class="parent">
-                          <a href="#">Nightwear</a>
-                          <span class="toggle-submenu"></span>
-                          <ul class="subcategory">
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                          </ul>
-                      </li>
-                      <li class="parent">
-                          <a href="#">Jumpers &amp; Cardigans</a>
-                          <span class="toggle-submenu"></span>
-                          <ul class="subcategory">
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                              <li><a href="#">subcategory 1</a></li>
-                          </ul>
-                      </li>
+                      </li>                      
                   </ul>
               </div>
-          </div><!-- Block  bestseller products-->
+          </div>
+          <!-- Block  bestseller products-->
 
           <!-- Block  bestseller products-->
           <div class="block-sidebar block-sidebar-products">
@@ -595,7 +551,7 @@
                   <strong>BEST SALES</strong>
               </div>
               <div class="block-content">
-                  <div class="owl-carousel" 
+                <div class="owl-carousel" 
                   data-nav="false" 
                   data-dots="true" 
                   data-margin="0" 
@@ -609,73 +565,24 @@
                   "600":{"items":2},
                   "992":{"items":1}
                   }'>
-                      <div class="item">
-                          <div class="product-item product-item-opt-2">
-                              <div class="product-item-info">
-                                  <div class="product-item-photo">
-                                      <a class="product-item-img" href="#"><img alt="product name" src="images/media/detail/best1.jpg"></a>
-                                  </div>
-                                  <div class="product-item-detail">
-                                      <strong class="product-item-name"><a href="#">Man’s Within Plus Size Flared</a></strong>
-                                      <div class="clearfix">
-                                          <div class="product-item-price">
-                                              <span class="price">$45.00</span>
-                                          </div>
-                                          <div class="product-reviews-summary">
-                                              <div class="rating-summary">
-                                                  <div title="70%" class="rating-result">
-                                                      <span style="width:70%">
-                                                          <span><span>70</span>% of <span>100</span></span>
-                                                      </span>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
+                  <div class="item">
+                      <div class="product-item product-item-opt-2">
+                          <div class="product-item-info">
+                              <div class="product-item-photo">
+                                  <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/detail/best1.jpg')}}"></a>
                               </div>
-                          </div>
-                          <div class="product-item product-item-opt-2">
-                              <div class="product-item-info">
-                                  <div class="product-item-photo">
-                                      <a class="product-item-img" href="#"><img alt="product name" src="images/media/detail/best2.jpg"></a>
-                                  </div>
-                                  <div class="product-item-detail">
-                                      <strong class="product-item-name"><a href="#">Woman Within Plus Size Flared</a></strong>
-                                      <div class="clearfix">
-                                          <div class="product-item-price">
-                                              <span class="price">$45.00</span>
-                                          </div>
-                                          <div class="product-reviews-summary">
-                                              <div class="rating-summary">
-                                                  <div title="70%" class="rating-result">
-                                                      <span style="width:70%">
-                                                          <span><span>70</span>% of <span>100</span></span>
-                                                      </span>
-                                                  </div>
-                                              </div>
-                                          </div>
+                              <div class="product-item-detail">
+                                  <strong class="product-item-name"><a href="#">Man’s Within Plus Size Flared</a></strong>
+                                  <div class="clearfix">
+                                      <div class="product-item-price">
+                                          <span class="price">$45.00</span>
                                       </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="product-item product-item-opt-2">
-                              <div class="product-item-info">
-                                  <div class="product-item-photo">
-                                      <a class="product-item-img" href="#"><img alt="product name" src="images/media/detail/best3.jpg"></a>
-                                  </div>
-                                  <div class="product-item-detail">
-                                      <strong class="product-item-name"><a href="#">Plus Size Rock Star Skirt</a></strong>
-                                      <div class="clearfix">
-                                          <div class="product-item-price">
-                                              <span class="price">$45.00</span>
-                                          </div>
-                                          <div class="product-reviews-summary">
-                                              <div class="rating-summary">
-                                                  <div title="70%" class="rating-result">
-                                                      <span style="width:70%">
-                                                          <span><span>70</span>% of <span>100</span></span>
-                                                      </span>
-                                                  </div>
+                                      <div class="product-reviews-summary">
+                                          <div class="rating-summary">
+                                              <div title="70%" class="rating-result">
+                                                  <span style="width:70%">
+                                                      <span><span>70</span>% of <span>100</span></span>
+                                                  </span>
                                               </div>
                                           </div>
                                       </div>
@@ -683,73 +590,47 @@
                               </div>
                           </div>
                       </div>
-                      <div class="item">
-                          <div class="product-item product-item-opt-2">
-                              <div class="product-item-info">
-                                  <div class="product-item-photo">
-                                      <a class="product-item-img" href="#"><img alt="product name" src="images/media/detail/best1.jpg"></a>
-                                  </div>
-                                  <div class="product-item-detail">
-                                      <strong class="product-item-name"><a href="#">Man’s Within Plus Size Flared</a></strong>
-                                      <div class="clearfix">
-                                          <div class="product-item-price">
-                                              <span class="price">$45.00</span>
-                                          </div>
-                                          <div class="product-reviews-summary">
-                                              <div class="rating-summary">
-                                                  <div title="70%" class="rating-result">
-                                                      <span style="width:70%">
-                                                          <span><span>70</span>% of <span>100</span></span>
-                                                      </span>
-                                                  </div>
+                      <div class="product-item product-item-opt-2">
+                          <div class="product-item-info">
+                              <div class="product-item-photo">
+                                  <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/detail/best2.jpg')}}"></a>
+                              </div>
+                              <div class="product-item-detail">
+                                  <strong class="product-item-name"><a href="#">Woman Within Plus Size Flared</a></strong>
+                                  <div class="clearfix">
+                                      <div class="product-item-price">
+                                          <span class="price">$45.00</span>
+                                      </div>
+                                      <div class="product-reviews-summary">
+                                          <div class="rating-summary">
+                                              <div title="70%" class="rating-result">
+                                                  <span style="width:70%">
+                                                      <span><span>70</span>% of <span>100</span></span>
+                                                  </span>
                                               </div>
                                           </div>
                                       </div>
                                   </div>
                               </div>
                           </div>
-                          <div class="product-item product-item-opt-2">
-                              <div class="product-item-info">
-                                  <div class="product-item-photo">
-                                      <a class="product-item-img" href="#"><img alt="product name" src="images/media/detail/best2.jpg"></a>
-                                  </div>
-                                  <div class="product-item-detail">
-                                      <strong class="product-item-name"><a href="#">Woman Within Plus Size Flared</a></strong>
-                                      <div class="clearfix">
-                                          <div class="product-item-price">
-                                              <span class="price">$45.00</span>
-                                          </div>
-                                          <div class="product-reviews-summary">
-                                              <div class="rating-summary">
-                                                  <div title="70%" class="rating-result">
-                                                      <span style="width:70%">
-                                                          <span><span>70</span>% of <span>100</span></span>
-                                                      </span>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
+                      </div>
+                      <div class="product-item product-item-opt-2">
+                          <div class="product-item-info">
+                              <div class="product-item-photo">
+                                  <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/detail/best3.jpg')}}"></a>
                               </div>
-                          </div>
-                          <div class="product-item product-item-opt-2">
-                              <div class="product-item-info">
-                                  <div class="product-item-photo">
-                                      <a class="product-item-img" href="#"><img alt="product name" src="images/media/detail/best3.jpg"></a>
-                                  </div>
-                                  <div class="product-item-detail">
-                                      <strong class="product-item-name"><a href="#">Plus Size Rock Star Skirt</a></strong>
-                                      <div class="clearfix">
-                                          <div class="product-item-price">
-                                              <span class="price">$45.00</span>
-                                          </div>
-                                          <div class="product-reviews-summary">
-                                              <div class="rating-summary">
-                                                  <div title="70%" class="rating-result">
-                                                      <span style="width:70%">
-                                                          <span><span>70</span>% of <span>100</span></span>
-                                                      </span>
-                                                  </div>
+                              <div class="product-item-detail">
+                                  <strong class="product-item-name"><a href="#">Plus Size Rock Star Skirt</a></strong>
+                                  <div class="clearfix">
+                                      <div class="product-item-price">
+                                          <span class="price">$45.00</span>
+                                      </div>
+                                      <div class="product-reviews-summary">
+                                          <div class="rating-summary">
+                                              <div title="70%" class="rating-result">
+                                                  <span style="width:70%">
+                                                      <span><span>70</span>% of <span>100</span></span>
+                                                  </span>
                                               </div>
                                           </div>
                                       </div>
@@ -758,8 +639,84 @@
                           </div>
                       </div>
                   </div>
+                  <div class="item">
+                      <div class="product-item product-item-opt-2">
+                          <div class="product-item-info">
+                              <div class="product-item-photo">
+                                  <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/detail/best1.jpg')}}"></a>
+                              </div>
+                              <div class="product-item-detail">
+                                  <strong class="product-item-name"><a href="#">Man’s Within Plus Size Flared</a></strong>
+                                  <div class="clearfix">
+                                      <div class="product-item-price">
+                                          <span class="price">$45.00</span>
+                                      </div>
+                                      <div class="product-reviews-summary">
+                                          <div class="rating-summary">
+                                              <div title="70%" class="rating-result">
+                                                  <span style="width:70%">
+                                                      <span><span>70</span>% of <span>100</span></span>
+                                                  </span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product-item product-item-opt-2">
+                          <div class="product-item-info">
+                              <div class="product-item-photo">
+                                  <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/detail/best2.jpg')}}"></a>
+                              </div>
+                              <div class="product-item-detail">
+                                  <strong class="product-item-name"><a href="#">Woman Within Plus Size Flared</a></strong>
+                                  <div class="clearfix">
+                                      <div class="product-item-price">
+                                          <span class="price">$45.00</span>
+                                      </div>
+                                      <div class="product-reviews-summary">
+                                          <div class="rating-summary">
+                                              <div title="70%" class="rating-result">
+                                                  <span style="width:70%">
+                                                      <span><span>70</span>% of <span>100</span></span>
+                                                  </span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="product-item product-item-opt-2">
+                          <div class="product-item-info">
+                              <div class="product-item-photo">
+                                  <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/detail/best3.jpg')}}"></a>
+                              </div>
+                              <div class="product-item-detail">
+                                  <strong class="product-item-name"><a href="#">Plus Size Rock Star Skirt</a></strong>
+                                  <div class="clearfix">
+                                      <div class="product-item-price">
+                                          <span class="price">$45.00</span>
+                                      </div>
+                                      <div class="product-reviews-summary">
+                                          <div class="rating-summary">
+                                              <div title="70%" class="rating-result">
+                                                  <span style="width:70%">
+                                                      <span><span>70</span>% of <span>100</span></span>
+                                                  </span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
               </div>
-          </div><!-- Block  bestseller products-->
+          </div>
+          <!-- Block  bestseller products-->
 
           <!-- block slide top -->
           <div class="block-sidebar block-banner-sidebar">
@@ -772,13 +729,13 @@
                   data-autoplay="true" 
                   data-loop="true">
                   <div class="item item1" >
-                     <img src="images/media/detail/banner-slide2.jpg" alt="images">
+                     <img src="{{asset('assets/front/images/media/detail/banner-slide2.jpg')}}" alt="images">
                   </div>
                   <div class="item item2" >
-                     <img src="images/media/detail/banner-slide2.jpg" alt="images">
+                     <img src="{{asset('assets/front/images/media/detail/banner-slide2.jpg')}}" alt="images">
                   </div>
                   <div class="item item3" >
-                     <img src="images/media/detail/banner-slide2.jpg" alt="images">
+                     <img src="{{asset('assets/front/images/media/detail/banner-slide2.jpg')}}" alt="images">
                   </div>
               </div>
           </div><!-- block slide top -->
@@ -789,7 +746,7 @@
                   <strong>SALE PRODUCTS</strong>
               </div>
               <div class="block-content">
-                  <div class="owl-carousel" 
+                <div class="owl-carousel" 
                   data-nav="false" 
                   data-dots="true" 
                   data-margin="0" 
@@ -803,96 +760,31 @@
                   "600":{"items":2},
                   "992":{"items":1}
                   }'>
-                      <div class="product-item product-item-opt-2">
-                          <div class="product-item-info">
-                              <div class="product-item-photo">
-                                  <a href="#" class="product-item-img"><img src="images/media/detail/sale1.jpg" alt="product name"></a>
-                                  <div class="product-item-actions">
-                                      <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-                                      <a href="#" class="btn btn-compare"><span>compare</span></a>
-                                      <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-                                  </div>
-                                  <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                  <span class="product-item-label label-price">30% <span>off</span></span>
+                  <div class="product-item product-item-opt-2">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/detail/sale1.jpg')}}" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
                               </div>
-                              <div class="product-item-detail">
-                                  <strong class="product-item-name"><a href="#">Luxury Dark Blue Coast</a></strong>
-                                  <div class="clearfix">
-                                      <div class="product-item-price">
-                                          <span class="price">$45.00</span>
-                                          <span class="old-price">$52.00</span>
-                                      </div>
-                                      <div class="product-reviews-summary">
-                                          <div class="rating-summary">
-                                              <div class="rating-result" title="70%">
-                                                  <span style="width:70%">
-                                                      <span><span>70</span>% of <span>100</span></span>
-                                                  </span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                              <span class="product-item-label label-price">30% <span>off</span></span>
                           </div>
-                      </div>
-                      <div class="product-item product-item-opt-2">
-                          <div class="product-item-info">
-                              <div class="product-item-photo">
-                                  <a href="#" class="product-item-img"><img src="images/media/product1.jpg" alt="product name"></a>
-                                  <div class="product-item-actions">
-                                      <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-                                      <a href="#" class="btn btn-compare"><span>compare</span></a>
-                                      <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Luxury Dark Blue Coast</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
                                   </div>
-                                  <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                  
-                              </div>
-                              <div class="product-item-detail">
-                                  <strong class="product-item-name"><a href="#">Asus Ispiron 20</a></strong>
-                                  <div class="clearfix">
-                                      <div class="product-item-price">
-                                          <span class="price">$45.00</span>
-                                          <span class="old-price">$52.00</span>
-                                      </div>
-                                      <div class="product-reviews-summary">
-                                          <div class="rating-summary">
-                                              <div class="rating-result" title="70%">
-                                                  <span style="width:70%">
-                                                      <span><span>70</span>% of <span>100</span></span>
-                                                  </span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="product-item product-item-opt-2">
-                          <div class="product-item-info">
-                              <div class="product-item-photo">
-                                  <a href="#" class="product-item-img"><img src="images/media/product1.jpg" alt="product name"></a>
-                                  <div class="product-item-actions">
-                                      <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-                                      <a href="#" class="btn btn-compare"><span>compare</span></a>
-                                      <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-                                  </div>
-                                  <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                  <span class="product-item-label label-price">30% <span>off</span></span>
-                              </div>
-                              <div class="product-item-detail">
-                                  <strong class="product-item-name"><a href="#">Asus Ispiron 20</a></strong>
-                                  <div class="clearfix">
-                                      <div class="product-item-price">
-                                          <span class="price">$45.00</span>
-                                          <span class="old-price">$52.00</span>
-                                      </div>
-                                      <div class="product-reviews-summary">
-                                          <div class="rating-summary">
-                                              <div class="rating-result" title="70%">
-                                                  <span style="width:70%">
-                                                      <span><span>70</span>% of <span>100</span></span>
-                                                  </span>
-                                              </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="70%">
+                                              <span style="width:70%">
+                                                  <span><span>70</span>% of <span>100</span></span>
+                                              </span>
                                           </div>
                                       </div>
                                   </div>
@@ -900,8 +792,75 @@
                           </div>
                       </div>
                   </div>
-              </div>
-          </div><!-- Block  SALE products-->
+                  <div class="product-item product-item-opt-2">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product1.jpg')}}" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                              
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Asus Ispiron 20</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="70%">
+                                              <span style="width:70%">
+                                                  <span><span>70</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product-item product-item-opt-2">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product1.jpg')}}" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                              <span class="product-item-label label-price">30% <span>off</span></span>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Asus Ispiron 20</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="70%">
+                                              <span style="width:70%">
+                                                  <span><span>70</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+             	</div>
+          </div>
+          <!-- Block  SALE products-->
+
           <!-- block slide top -->
           <div class="block-sidebar block-sidebar-testimonials2">                 
               <div class="block-content">
@@ -915,7 +874,7 @@
                       data-loop="true">
                       <div class="item " >
                           <div class="img">
-                              <img src="images/icon/icon1.png" alt="icon1">
+                              <img src="{{asset('assets/front/images/icon/icon1.png')}}" alt="icon1">
                          </div>
                          <strong class="title">100% Money Back Guaranteed</strong>
                          <div class="des">
@@ -929,6 +888,7 @@
           </div><!-- block slide top -->
       </div>
       <!-- Sidebar -->
+
     </div>
   </div>
 @endsection

@@ -29,10 +29,10 @@
 	                data-autoplay="true" 
 	                data-loop="true">
 	                <div class="item " >
-	                   <a href="#"><img src="images/media/category-images1.jpg" alt="category-images"></a>
+	                   <a href="#"><img src="{{asset('assets/front/images/media/category-images1.jpg')}}" alt="category-images"></a>
 	                </div>
 	                <div class="item " >
-	                    <a href="#"><img src="images/media/category-images2.jpg" alt="category-images"></a>
+	                    <a href="#"><img src="{{asset('assets/front/images/media/category-images2.jpg')}}" alt="category-images"></a>
 	                </div>
 	            </div>
 	        </div><!-- images categori -->
@@ -106,606 +106,213 @@
 	                </li>
 	            </ul>
 	        </div><!-- Toolbar -->
+
 	        <!-- List Products -->
 	        <div class="products  products-grid">
-	            <ol class="product-items row">
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product1.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                                <span class="product-item-label label-price">30% <span>off</span></span>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Nano Washing Machine</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>                                
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product2.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Electronic Cleaning Machine</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product3.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Holdhand Cleaning Machine</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product4.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Advanced Dark Blue Coast</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product5.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Edge A3 Smart Phone</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product6.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Silver Drop Camera</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product7.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Multi-Directions Camera</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product8.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Ag On Board Camera</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product9.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">iZon White Silver Camera</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product10.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Microwave Compared</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product11.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Perfect Device For Kitchen</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product12.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Holdhand Cleaning Machine</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product13.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Nano Internet Smart TV</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product14.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Super Thin Internet TV</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product15.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">SamSung Led TV</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product16.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Black Electric Teapot</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product17.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Luxury Sleeping Light</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>
-	                <li class="col-sm-4 product-item ">
-	                    <div class="product-item-opt-1">
-	                        <div class="product-item-info">
-	                            <div class="product-item-photo">
-	                                <a href="#" class="product-item-img"><img src="images/media/product18.jpg" alt="product name"></a>
-	                                <div class="product-item-actions">
-	                                    <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
-	                                    <a href="#" class="btn btn-compare"><span>compare</span></a>
-	                                    <a href="#" class="btn btn-quickview"><span>quickview</span></a>
-	                                </div>
-	                                <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-	                            </div>
-	                            <div class="product-item-detail">
-	                                <strong class="product-item-name"><a href="#">Pogy Pretty Iron Chair</a></strong>
-	                                <div class="clearfix">
-	                                    <div class="product-item-price">
-	                                        <span class="price">$45.00</span>
-	                                        <span class="old-price">$52.00</span>
-	                                    </div>
-	                                    <div class="product-reviews-summary">
-	                                        <div class="rating-summary">
-	                                            <div class="rating-result" title="80%">
-	                                                <span style="width:80%">
-	                                                    <span><span>80</span>% of <span>100</span></span>
-	                                                </span>
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </li>                                
-	            </ol><!-- list product -->
-	        </div> <!-- List Products -->
+            <ol class="product-items row">
+              <li class="col-sm-4 product-item ">
+                  <div class="product-item-opt-1">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="images/media/product1.jpg" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                              <span class="product-item-label label-price">30% <span>off</span></span>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Nano Washing Machine</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="80%">
+                                              <span style="width:80%">
+                                                  <span><span>80</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>                                
+              <li class="col-sm-4 product-item ">
+                  <div class="product-item-opt-1">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="images/media/product2.jpg" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Electronic Cleaning Machine</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="80%">
+                                              <span style="width:80%">
+                                                  <span><span>80</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="col-sm-4 product-item ">
+                  <div class="product-item-opt-1">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="images/media/product3.jpg" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Holdhand Cleaning Machine</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="80%">
+                                              <span style="width:80%">
+                                                  <span><span>80</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="col-sm-4 product-item ">
+                  <div class="product-item-opt-1">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="images/media/product4.jpg" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Advanced Dark Blue Coast</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="80%">
+                                              <span style="width:80%">
+                                                  <span><span>80</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="col-sm-4 product-item ">
+                  <div class="product-item-opt-1">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="images/media/product5.jpg" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Edge A3 Smart Phone</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="80%">
+                                              <span style="width:80%">
+                                                  <span><span>80</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="col-sm-4 product-item ">
+                  <div class="product-item-opt-1">
+                      <div class="product-item-info">
+                          <div class="product-item-photo">
+                              <a href="#" class="product-item-img"><img src="images/media/product6.jpg" alt="product name"></a>
+                              <div class="product-item-actions">
+                                  <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
+                                  <a href="#" class="btn btn-compare"><span>compare</span></a>
+                                  <a href="#" class="btn btn-quickview"><span>quickview</span></a>
+                              </div>
+                              <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
+                          </div>
+                          <div class="product-item-detail">
+                              <strong class="product-item-name"><a href="#">Silver Drop Camera</a></strong>
+                              <div class="clearfix">
+                                  <div class="product-item-price">
+                                      <span class="price">$45.00</span>
+                                      <span class="old-price">$52.00</span>
+                                  </div>
+                                  <div class="product-reviews-summary">
+                                      <div class="rating-summary">
+                                          <div class="rating-result" title="80%">
+                                              <span style="width:80%">
+                                                  <span><span>80</span>% of <span>100</span></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>                              
+            </ol>
+	        </div>
+	        <!-- List Products -->
+
 	        <!-- Toolbar -->
 	        <div class=" toolbar-products toolbar-bottom">
 	            <div class="modes">
@@ -760,9 +367,11 @@
 	                    </a>
 	                </li>
 	            </ul>
-	        </div><!-- Toolbar -->
+	        </div>
+	        <!-- Toolbar -->
 	    </div>
 	    <!-- Main Content -->
+
 	    <!-- Sidebar -->
 	    <div class="col-md-3 col-md-pull-9  col-sidebar">
 	        <!-- Block  bestseller products-->
@@ -771,78 +380,42 @@
 	                <strong>PRODUCT TYPES</strong>
 	            </div>
 	            <div class="block-content">
-	                <ul class="items">
-	                    <li class="parent">
-	                        <a href="#">Dress</a>
-	                        <span class="toggle-submenu"></span>
-	                        <ul class="subcategory">
-	                            <li >
-	                              <a href="#">subcategory 1</a>
-	                            </li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                        </ul>
-	                    </li>
-	                    <li>
-	                        <a href="#">Bags</a>
-	                    </li>
-	                    <li class="parent">
-	                        <a href="#">Cost &amp; Jackets</a>
-	                        <span class="toggle-submenu"></span>
-	                        <ul class="subcategory">
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                        </ul>
-	                    </li>
-	                    <li class="parent">
-	                        <a href="#">Beauty</a>
-	                        <span class="toggle-submenu"></span>
-	                        <ul class="subcategory">
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                        </ul>
-	                    </li>
-	                    <li class="parent">
-	                        <a href="#">Jewellery</a>
-	                        <span class="toggle-submenu"></span>
-	                        <ul class="subcategory">
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                        </ul>
-	                    </li>
-	                    <li class="parent">
-	                        <a href="#">Nightwear</a>
-	                        <span class="toggle-submenu"></span>
-	                        <ul class="subcategory">
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                        </ul>
-	                    </li>
-	                    <li class="parent">
-	                        <a href="#">Jumpers &amp; Cardigans</a>
-	                        <span class="toggle-submenu"></span>
-	                        <ul class="subcategory">
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                            <li><a href="#">subcategory 1</a></li>
-	                        </ul>
-	                    </li>
-	                </ul>
+                <ul class="items">
+                  <li class="parent">
+                      <a href="#">Dress</a>
+                      <span class="toggle-submenu"></span>
+                      <ul class="subcategory">
+                          <li >
+                            <a href="#">subcategory 1</a>
+                          </li>
+                          <li><a href="#">subcategory 1</a></li>
+                          <li><a href="#">subcategory 1</a></li>
+                          <li><a href="#">subcategory 1</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#">Bags</a>
+                  </li>
+                  <li class="parent">
+                      <a href="#">Cost &amp; Jackets</a>
+                      <span class="toggle-submenu"></span>
+                      <ul class="subcategory">
+                          <li><a href="#">subcategory 1</a></li>
+                          <li><a href="#">subcategory 1</a></li>
+                          <li><a href="#">subcategory 1</a></li>
+                          <li><a href="#">subcategory 1</a></li>
+                      </ul>
+                  </li>
+   	            </ul>
 	            </div>
-	        </div><!-- Block  bestseller products-->
+	        </div>
+	        <!-- Block  bestseller products-->
+
 	        <!-- block filter products -->
 	        <div id="layered-filter-block" class="block-sidebar block-filter no-hide">
-	            <div class="close-filter-products"><i class="fa fa-times" aria-hidden="true"></i></div>
+            <div class="close-filter-products">
+            	<i class="fa fa-times" aria-hidden="true"></i>
+            </div>
 	            <div class="block-title">
 	                <strong>FILTER SELECTION</strong>
 	            </div>
@@ -866,44 +439,18 @@
 	                                <label>
 	                                    <input type="checkbox"><span>Batteries & Chargers <span class="count">(20)</span></span>
 	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Dresses <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Knitted <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Pants <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Best selling <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Headphone & Headset <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
+	                            </li>	                           
 	                        </ol>
 	                    </div>
-	                </div><!-- Filter Item  categori-->
+	                </div>
+	                <!-- Filter Item  categori-->
 
 	                <!-- filter price -->
 	                <div class="filter-options-item filter-options-price">
 	                    <div class="filter-options-title">Price</div>
 	                    <div class="filter-options-content">
-	                        <div class="slider-range">
-	                            
+	                        <div class="slider-range">	                            
 	                            <div id="slider-range" ></div>
-	                            
 	                            <div class="action">
 	                                <span class="price">
 	                                    <span>Range:</span>
@@ -918,21 +465,11 @@
 	                                <label>
 	                                    <input type="checkbox"><span>$20 - $50 <span class="count">(20)</span>  </span>
 	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>$50 - $100 <span class="count">(20)</span> </span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>$100 - $250 <span class="count">(20)</span> </span>
-	                                </label>
-	                            </li>
-	                           
+	                            </li>	                           
 	                        </ol>
 	                    </div>
-	                </div><!-- filter price -->
+	                </div>
+	                <!-- filter price -->
 
 	                <!-- filter brad-->
 	                <div class="filter-options-item filter-options-brand">
@@ -947,26 +484,6 @@
 	                            <li class="item ">
 	                                <label>
 	                                    <input type="checkbox"><span>Mamypokon <span class="count">(20)</span> </span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Pamperson <span class="count">(20)</span> </span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Pradano <span class="count">(20)</span> </span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>Pumano <span class="count">(20)</span> </span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>AME <span class="count">(20)</span> </span>
 	                                </label>
 	                            </li>
 	                        </ol>
@@ -1017,8 +534,7 @@
 	                                    </span>
 	                                    
 	                                </label>
-	                            </li>
-	                            
+	                            </li>	                            
 	                            <li class="item">
 	                                <label>
 	                                    <input type="checkbox">
@@ -1028,8 +544,7 @@
 	                                    </span>
 	                                    
 	                                </label>
-	                            </li>
-	                            
+	                            </li>	                            
 	                            <li class="item">
 	                                <label>
 	                                    <input type="checkbox">
@@ -1069,8 +584,7 @@
 	                                    </span>
 	                                    
 	                                </label>
-	                            </li>
-	                           
+	                            </li>	                           
 	                        </ol>
 	                    </div>
 	                </div><!-- Filter Item -->
@@ -1099,52 +613,10 @@
 	                                <label>
 	                                    <input type="checkbox"><span>m <span class="count">(20)</span></span>
 	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>L <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>32 <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>36 <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>37 <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>X <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>XXL <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>XXL <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            <li class="item ">
-	                                <label>
-	                                    <input type="checkbox"><span>m <span class="count">(20)</span></span>
-	                                </label>
-	                            </li>
-	                            
+	                            </li>	                            
 	                        </ol>
 	                    </div>
 	                </div><!-- Filter Item  size-->
-
 	            </div>
 	        </div><!-- Filter -->
 	        <!-- block slide top -->
