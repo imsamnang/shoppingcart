@@ -35,7 +35,9 @@
 	                    <a href="#"><img src="{{asset('assets/front/images/media/category-images2.jpg')}}" alt="category-images"></a>
 	                </div>
 	            </div>
-	        </div><!-- images categori -->
+	        </div>
+          <!-- images categori -->
+
 	        <!-- link categori -->
 	        <ul class="category-links">
 	            <li class="current-cate"><a href="#">All Products</a></li>
@@ -47,65 +49,67 @@
 	            <li><a href="#">Blouses</a></li>
 	        </ul>
 	        <!-- link categori -->
-	        <!-- Toolbar -->
-	        <div class=" toolbar-products toolbar-top">
-	            <div class="btn-filter-products">
-	                <span>Filter</span>
-	            </div>
-	            <h1 class="cate-title">Electronics</h1>
-	            <div class="modes">
-	                <strong  class="label">View as:</strong>
-	                <strong  class="modes-mode active mode-grid" title="Grid">
-	                    <span>grid</span>
-	                </strong>
-	                <a  href="Category2.html" title="List" class="modes-mode mode-list">
-	                    <span>list</span>
-	                </a>
-	            </div><!-- View as -->                           
-	            <div class="toolbar-option">
-	                <div class="toolbar-sorter ">
-	                    <label    class="label">Short by:</label>
-	                    <select class="sorter-options form-control" >
-	                        <option selected="selected" value="position">Position</option>
-	                        <option value="name">Name</option>
-	                        <option value="price">Price</option>
-	                    </select>
-	                    <a href="#" class="sorter-action"></a>
-	                </div><!-- Short by -->
-	                <div class="toolbar-limiter">
-	                    <label   class="label">
-	                        <span>Show:</span>
-	                    </label>                                   
-	                    <select class="limiter-options form-control" >
-	                        <option selected="selected" value="9">Show 18</option>
-	                        <option value="15">Show 15</option>
-	                        <option value="30">Show 30</option>
-	                    </select>                                    
-	                </div><!-- Show per page -->
-	            </div>
-	            <ul class="pagination">
-	                <li class="action">
-	                    <a href="#">
-	                        <span><i aria-hidden="true" class="fa fa-angle-left"></i></span>
-	                    </a>
-	                </li>
-	                
-	                <li class="active">
-	                    <a href="#">1</a>
-	                </li>
-	                <li>
-	                    <a href="#">2</a>
-	                </li>
-	                <li>
-	                    <a href="#">3</a>
-	                </li>
-	                <li class="action">
-	                    <a href="#">
-	                        <span><i aria-hidden="true" class="fa fa-angle-right"></i></span>
-	                    </a>
-	                </li>
-	            </ul>
-	        </div><!-- Toolbar -->
+
+          <!-- Toolbar -->
+          <div class=" toolbar-products toolbar-top">
+              <div class="btn-filter-products">
+                  <span>Filter</span>
+              </div>
+              <h1 class="cate-title">Electronics</h1>
+              <div class="modes">
+                  <strong  class="label">View as:</strong>
+                  <strong  class="modes-mode active mode-grid" title="Grid">
+                      <span>grid</span>
+                  </strong>
+                  <a  href="Category2.html" title="List" class="modes-mode mode-list">
+                      <span>list</span>
+                  </a>
+              </div><!-- View as -->                           
+              <div class="toolbar-option">
+                  <div class="toolbar-sorter ">
+                      <label    class="label">Short by:</label>
+                      <select class="sorter-options form-control" >
+                          <option selected="selected" value="position">Position</option>
+                          <option value="name">Name</option>
+                          <option value="price">Price</option>
+                      </select>
+                      <a href="#" class="sorter-action"></a>
+                  </div><!-- Short by -->
+                  <div class="toolbar-limiter">
+                      <label   class="label">
+                          <span>Show:</span>
+                      </label>                                   
+                      <select class="limiter-options form-control" >
+                          <option selected="selected" value="9">Show 18</option>
+                          <option value="15">Show 15</option>
+                          <option value="30">Show 30</option>
+                      </select>                                    
+                  </div><!-- Show per page -->
+              </div>
+              <ul class="pagination">
+                  <li class="action">
+                      <a href="#">
+                          <span><i aria-hidden="true" class="fa fa-angle-left"></i></span>
+                      </a>
+                  </li>
+                  
+                  <li class="active">
+                      <a href="#">1</a>
+                  </li>
+                  <li>
+                      <a href="#">2</a>
+                  </li>
+                  <li>
+                      <a href="#">3</a>
+                  </li>
+                  <li class="action">
+                      <a href="#">
+                          <span><i aria-hidden="true" class="fa fa-angle-right"></i></span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <!-- Toolbar -->
 
 	        <!-- List Products -->
 	        <div class="products  products-grid">
@@ -114,7 +118,7 @@
                   <div class="product-item-opt-1">
                       <div class="product-item-info">
                           <div class="product-item-photo">
-                              <a href="#" class="product-item-img"><img src="images/media/product1.jpg" alt="product name"></a>
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product1.jpg')}}" alt="product name"></a>
                               <div class="product-item-actions">
                                   <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                   <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -148,7 +152,7 @@
                   <div class="product-item-opt-1">
                       <div class="product-item-info">
                           <div class="product-item-photo">
-                              <a href="#" class="product-item-img"><img src="images/media/product2.jpg" alt="product name"></a>
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product2.jpg')}}" alt="product name"></a>
                               <div class="product-item-actions">
                                   <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                   <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -181,7 +185,7 @@
                   <div class="product-item-opt-1">
                       <div class="product-item-info">
                           <div class="product-item-photo">
-                              <a href="#" class="product-item-img"><img src="images/media/product3.jpg" alt="product name"></a>
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product3.jpg')}}" alt="product name"></a>
                               <div class="product-item-actions">
                                   <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                   <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -214,7 +218,7 @@
                   <div class="product-item-opt-1">
                       <div class="product-item-info">
                           <div class="product-item-photo">
-                              <a href="#" class="product-item-img"><img src="images/media/product4.jpg" alt="product name"></a>
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product4.jpg')}}" alt="product name"></a>
                               <div class="product-item-actions">
                                   <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                   <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -247,7 +251,7 @@
                   <div class="product-item-opt-1">
                       <div class="product-item-info">
                           <div class="product-item-photo">
-                              <a href="#" class="product-item-img"><img src="images/media/product5.jpg" alt="product name"></a>
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product5.jpg')}}" alt="product name"></a>
                               <div class="product-item-actions">
                                   <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                   <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -280,7 +284,7 @@
                   <div class="product-item-opt-1">
                       <div class="product-item-info">
                           <div class="product-item-photo">
-                              <a href="#" class="product-item-img"><img src="images/media/product6.jpg" alt="product name"></a>
+                              <a href="#" class="product-item-img"><img src="{{asset('assets/front/images/media/product6.jpg')}}" alt="product name"></a>
                               <div class="product-item-actions">
                                   <a href="#" class="btn btn-wishlist"><span>wishlist</span></a>
                                   <a href="#" class="btn btn-compare"><span>compare</span></a>
@@ -313,62 +317,63 @@
 	        </div>
 	        <!-- List Products -->
 
-	        <!-- Toolbar -->
-	        <div class=" toolbar-products toolbar-bottom">
-	            <div class="modes">
-	                <strong  class="label">View as:</strong>
-	                <strong  class="modes-mode active mode-grid" title="Grid">
-	                    <span>grid</span>
-	                </strong>
-	                <a  href="Category2.html" title="List" class="modes-mode mode-list">
-	                    <span>list</span>
-	                </a>
-	            </div><!-- View as -->                           
-	            <div class="toolbar-option">
-	                <div class="toolbar-sorter ">
-	                    <label class="label">Short by:</label>
-	                    <select class="sorter-options form-control" >
-	                        <option selected="selected" value="position">Product name</option>
-	                        <option value="name">Name</option>
-	                        <option value="price">Price</option>
-	                    </select>
-	                    <a href="#" class="sorter-action"></a>
-	                </div><!-- Short by -->
-	                <div class="toolbar-limiter">
-	                    <label   class="label">
-	                        <span>Show:</span>
-	                    </label>                                   
-	                    <select class="limiter-options form-control" >
-	                        <option selected="selected" value="9"> Show 18</option>
-	                        <option value="15">Show 15</option>
-	                        <option value="30">Show 30</option>
-	                    </select>                                    
-	                </div><!-- Show per page -->
-	            </div>
-	            <ul class="pagination">
-	                <li class="active">
-	                    <a href="#">1</a>
-	                </li>
-	                <li>
-	                    <a href="#">2</a>
-	                </li>
-	                <li>
-	                    <a href="#">3</a>
-	                </li>
-	                <li>
-	                    <a href="#">4</a>
-	                </li>
-	                <li>
-	                    <a href="#">5</a>
-	                </li>
-	                <li class="action action-next"> 
-	                    <a href="#">
-	                        Next <span><i aria-hidden="true" class="fa fa-angle-double-right"></i></span>
-	                    </a>
-	                </li>
-	            </ul>
-	        </div>
-	        <!-- Toolbar -->
+          <!-- Toolbar -->
+          <div class=" toolbar-products toolbar-bottom">
+              <div class="modes">
+                  <strong  class="label">View as:</strong>
+                  <strong  class="modes-mode active mode-grid" title="Grid">
+                      <span>grid</span>
+                  </strong>
+                  <a  href="Category2.html" title="List" class="modes-mode mode-list">
+                      <span>list</span>
+                  </a>
+              </div><!-- View as -->                           
+              <div class="toolbar-option">
+                  <div class="toolbar-sorter ">
+                      <label class="label">Short by:</label>
+                      <select class="sorter-options form-control" >
+                          <option selected="selected" value="position">Product name</option>
+                          <option value="name">Name</option>
+                          <option value="price">Price</option>
+                      </select>
+                      <a href="#" class="sorter-action"></a>
+                  </div><!-- Short by -->
+                  <div class="toolbar-limiter">
+                      <label   class="label">
+                          <span>Show:</span>
+                      </label>                                   
+                      <select class="limiter-options form-control" >
+                          <option selected="selected" value="9"> Show 18</option>
+                          <option value="15">Show 15</option>
+                          <option value="30">Show 30</option>
+                      </select>                                    
+                  </div><!-- Show per page -->
+              </div>
+              <ul class="pagination">
+                  <li class="active">
+                      <a href="#">1</a>
+                  </li>
+                  <li>
+                      <a href="#">2</a>
+                  </li>
+                  <li>
+                      <a href="#">3</a>
+                  </li>
+                  <li>
+                      <a href="#">4</a>
+                  </li>
+                  <li>
+                      <a href="#">5</a>
+                  </li>
+                  <li class="action action-next"> 
+                      <a href="#">
+                          Next <span><i aria-hidden="true" class="fa fa-angle-double-right"></i></span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <!-- Toolbar --> 
+               
 	    </div>
 	    <!-- Main Content -->
 
@@ -630,13 +635,13 @@
 	                data-autoplay="true" 
 	                data-loop="true">
 	                <div class="item item1" >
-	                   <img src="images/media/banner-sidebar1.jpg" alt="images">
+	                   <img src="{{asset('assets/front/images/media/banner-sidebar1.jpg')}}" alt="images">
 	                </div>
 	                <div class="item item2" >
-	                   <img src="images/media/banner-sidebar1.jpg" alt="images">
+	                   <img src="{{asset('assets/front/images/media/banner-sidebar1.jpg')}}" alt="images">
 	                </div>
 	                <div class="item item3" >
-	                   <img src="images/media/banner-sidebar1.jpg" alt="images">
+	                   <img src="{{asset('assets/front/images/media/banner-sidebar1.jpg')}}" alt="images">
 	                </div>
 	            </div>
 	        </div><!-- block slide top -->
@@ -649,7 +654,7 @@
 	                <div class="product-item product-item-opt-1">
 	                    <div class="product-item-info">
 	                        <div class="product-item-photo">
-	                            <a class="product-item-img" href="#"><img alt="product name" src="images/media/floor5-1.jpg"></a>
+	                            <a class="product-item-img" href="#"><img alt="product name" src="{{asset('assets/front/images/media/floor5-1.jpg')}}"></a>
 	                        </div>
 	                        <div class="product-item-detail">
 	                            <strong class="product-item-name"><a href="#">Security Camera Size Flared</a></strong>
@@ -745,5 +750,24 @@
 @endsection
 
 @push('js')
-	{{-- expr --}}
+  <script type="text/javascript">
+      (function($) {
+          "use strict";
+          $(document).ready(function() {
+              $('#slider-range').slider({
+                  range: true,
+                  min: 0,
+                  max: 500,
+                  values: [0, 300],
+                  slide: function (event, ui) {
+                      $('#amount-left').text(ui.values[0] );
+                      $('#amount-right').text(ui.values[1] );
+                  }
+              });
+              $('#amount-left').text($('#slider-range').slider('values', 0));
+
+              $('#amount-right').text($('#slider-range').slider('values', 1));
+          });
+      })(jQuery);
+  </script>
 @endpush

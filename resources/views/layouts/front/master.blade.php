@@ -3,7 +3,7 @@
 <head>
   @include('includes.head')
 </head>
-<body class="cms-index-index index-opt-1">
+<body class="cms-index-index index-opt-1 catalog-category-view catalog-view_op1 catalog-product-view catalog-view_op1">
   <div class="wrapper">
     
     @include('includes.header')

@@ -914,6 +914,7 @@
 
 		<!-- MAIN -->
 		<main class="site-main">
+
       <div class="columns container">
         <!-- Block  Breadcrumb-->                        
         <ol class="breadcrumb no-hide">
@@ -954,6 +955,7 @@
                     <li><a href="#">Blouses</a></li>
                 </ul>
                 <!-- link categori -->
+
                 <!-- Toolbar -->
                 <div class=" toolbar-products toolbar-top">
                     <div class="btn-filter-products">
@@ -1012,7 +1014,9 @@
                             </a>
                         </li>
                     </ul>
-                </div><!-- Toolbar -->
+                </div>
+                <!-- Toolbar -->
+
                 <!-- List Products -->
                 <div class="products  products-grid">
                     <ol class="product-items row">
@@ -1612,7 +1616,9 @@
                             </div>
                         </li>                                
                     </ol><!-- list product -->
-                </div> <!-- List Products -->
+                </div>
+                <!-- List Products -->
+
                 <!-- Toolbar -->
                 <div class=" toolbar-products toolbar-bottom">
                     <div class="modes">
@@ -1667,7 +1673,8 @@
                             </a>
                         </li>
                     </ul>
-                </div><!-- Toolbar -->
+                </div>
+                <!-- Toolbar -->
             </div>
             <!-- Main Content -->
 
@@ -2178,6 +2185,7 @@
             <!-- Sidebar -->
         </div>
       </div>
+      
 		</main>
     <!-- end MAIN -->
 
@@ -2493,43 +2501,24 @@
     <!-- Custom scripts -->
 
     <script>
-
         (function($) {
-
             "use strict";
-
             $(document).ready(function() {
-
-                /*  [ Filter by price ]
-
-                - - - - - - - - - - - - - - - - - - - - */
-
                 $('#slider-range').slider({
-
                     range: true,
-
                     min: 0,
-
                     max: 500,
-
                     values: [0, 300],
-
                     slide: function (event, ui) {
-
                         $('#amount-left').text(ui.values[0] );
                         $('#amount-right').text(ui.values[1] );
-
                     }
-
                 });
-
                 $('#amount-left').text($('#slider-range').slider('values', 0));
 
                 $('#amount-right').text($('#slider-range').slider('values', 1));
-            }); 
-
+            });
         })(jQuery);
-
     </script>
 </body>
 
