@@ -13,9 +13,17 @@
             <span class="red">Ace</span>
             <span class="white" id="id-text2">Application</span>
         </h1>
-        <h4 class="blue" id="id-company-text">&copy; Company Name</h4>
+        <h4 class="red" id="id-company-text">
+          <?php 
+            $message = Session::get('message');
+            if($message){
+              echo $message;
+              Session::put('message',null);
+            }
+          ?>
+        </h4>
       </div>
-      <div class="space-20"></div>
+      <div class="space-10"></div>
         <div class="position-relative">
           <div id="login-box" class="login-box visible widget-box no-border">
             <div class="widget-body">
@@ -25,10 +33,9 @@
                     Please Enter Your Information
                 </h4>
                 <div class="space-6"></div>
-                <form method="POST" action="#">
-                  @csrf
-                  <fieldset>
-                    
+                <form method="POST" action="{{url('/admin_dashboard')}}">
+                  {{csrf_field()}}
+                  <fieldset>                    
                     <label class="block clearfix">
                       <span class="block input-icon input-icon-right">{{ __('E-Mail Address or Username') }}
                         <input type="text" class="form-control {{ $errors->has('email') || $errors->has('username')? ' is-invalid' : '' }}" placeholder="User Name" name="username" />
@@ -45,7 +52,6 @@
                           </span>
                       @endif                                
                     </label>
-
                     <label class="block clearfix">
                       <span class="block input-icon input-icon-right">{{ __('Password') }}
                         <input type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Password" name="password"/>
@@ -57,21 +63,17 @@
                           </span>
                         @endif                              
                     </label>
-
                     <div class="space"></div>
-
                     <div class="clearfix">
                         <label class="inline">
                             <input type="checkbox" class="ace" name="remember" {{ old('remember') ? 'checked' : '' }} />
                             <span class="lbl"> Remember Me</span>
                         </label>
-
                         <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
                             <i class="ace-icon fa fa-key"></i>
                             <span class="bigger-110">Login</span>
                         </button>
                     </div>
-
                     <div class="space-4"></div>
                   </fieldset>
                 </form>
@@ -83,11 +85,9 @@
                     <a class="btn btn-primary">
                         <i class="ace-icon fa fa-facebook"></i>
                     </a>
-
                     <a class="btn btn-info">
                         <i class="ace-icon fa fa-twitter"></i>
                     </a>
-
                     <a class="btn btn-danger">
                         <i class="ace-icon fa fa-google-plus"></i>
                     </a>
@@ -102,7 +102,6 @@
                       </a>
                     @endif  
                   </div>
-
                   <div>
                       <a href="{{route('register')}}" class="user-signup-link">
                           I want to register

@@ -21,7 +21,6 @@ class CreateOrdersTable extends Migration
             $table->float('order_total');
             $table->integer('order_status');
             $table->integer('order_date_time');
-            $table->timestamp('customer_id');
             $table->timestamps();
         });
     }

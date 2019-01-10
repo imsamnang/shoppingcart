@@ -14,5 +14,9 @@ Route::get('/product', function () {
 
 
 // Backend Site
-Route::get('/login','AdminController@login')->name('login');
+// Route::get('/login','AdminController@login')->name('login');
 Route::get('/register','AdminController@register')->name('register');
+Route::get('/cpanel','AdminController@showDashboard')->name('dashboard');
+Route::post('/admin_dashboard','AdminController@dashboard');53.
+Auth::routes();
+
