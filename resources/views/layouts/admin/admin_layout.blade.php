@@ -80,6 +80,7 @@
 	<script src="{{asset('assets/back/js/counter.js')}}"></script>	
 	<script src="{{asset('assets/back/js/retina.js')}}"></script>
 	<script src="{{asset('assets/back/js/custom.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 	<!-- end: JavaScript-->
 	@stack('js')
 </body>
