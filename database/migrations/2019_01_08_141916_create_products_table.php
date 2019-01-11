@@ -26,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->string('product_color');
             $table->integer('publication_status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

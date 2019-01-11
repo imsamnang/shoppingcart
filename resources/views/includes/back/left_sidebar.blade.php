@@ -7,12 +7,12 @@
 				</i><span class="hidden-tablet">Dashboard</span>
 				</a>
 			</li>	
-			<li><a href="messages.html">
+			<li><a href="{{route('admin.category.index')}}">
 				<i class="icon-envelope"></i><span class="hidden-tablet"> All Categories</span>
 				</a>
 			</li>
 			<li>
-				<a href="tasks.html"><i class="icon-tasks">				
+				<a href="{{route('admin.category.create')}}"><i class="icon-tasks">				
 					</i><span class="hidden-tablet"> Add Category</span>
 				</a>
 			</li>

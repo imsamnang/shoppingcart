@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->text('category_description');
             $table->integer('publication_status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

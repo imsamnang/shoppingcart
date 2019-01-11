@@ -21,6 +21,7 @@ class CreateOrderShippingsTable extends Migration
             $table->string('shipping_telephone');
             $table->string('shipping_email');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

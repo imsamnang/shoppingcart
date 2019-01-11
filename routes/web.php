@@ -24,8 +24,11 @@ Route::get('admin/register','Auth\AdminRegisterController@showRegistration')->na
 /**
  * route only for admin profile
  */
-Route::group(['middleware'=>'admin'], function() {
-	Route::get('/admin/dashboard', 'AdminController@dashboard')->name('dashboard');	
+Route::group(['prefix'=>'admin',['middleware'=>'admin']], function() {
+	Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+	Route::get('/list_category','Admin\CategoryController@index')->name('admin.category.index');
+	Route::get('/add_category','Admin\CategoryController@create')->name('admin.category.create');
+	Route::post('/store_category','Admin\CategoryController@store')->name('admin.category.store');	
 });
 
 
@@ -34,12 +37,12 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/product', function () {
-    return view('pages.product_detail');
-});
+// Route::get('/product', function () {
+//     return view('pages.product_detail');
+// });
 
-Route::get('/category', function () {
-    return view('pages.category_detail');
-});
+// Route::get('/category', function () {
+//     return view('pages.category_detail');
+// });
 
 

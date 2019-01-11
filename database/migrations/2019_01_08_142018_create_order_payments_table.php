@@ -19,6 +19,7 @@ class CreateOrderPaymentsTable extends Migration
             $table->integer('payment_status');
             $table->timestamp('payment_date_time');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

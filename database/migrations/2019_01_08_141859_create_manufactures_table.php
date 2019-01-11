@@ -19,6 +19,7 @@ class CreateManufacturesTable extends Migration
             $table->text('manufacture_description');
             $table->integer('publication_status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
