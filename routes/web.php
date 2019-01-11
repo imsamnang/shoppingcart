@@ -39,6 +39,8 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::view('/ace','layouts.admin.admin_master');
+
 // Route::get('/product', function () {
 //     return view('pages.product_detail');
 // });
