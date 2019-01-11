@@ -28,7 +28,9 @@ Route::group(['prefix'=>'admin',['middleware'=>'admin']], function() {
 	Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 	Route::get('/list_category','Admin\CategoryController@index')->name('admin.category.index');
 	Route::get('/add_category','Admin\CategoryController@create')->name('admin.category.create');
-	Route::post('/save_category','Admin\CategoryController@store')->name('admin.category.store');	
+	Route::post('/save_category','Admin\CategoryController@store')->name('admin.category.store');
+	Route::get('/publish/{id}','Admin\CategoryController@publish')->name('admin.category.publish');
+	Route::get('/unpublish/{id}','Admin\CategoryController@unpublish')->name('admin.category.unpublish');
 });
 
 

@@ -30,7 +30,24 @@ class CategoryController extends Controller
 		$categories->save();
 	  Toastr::success('Category Save Successfull','success');
 		return back();
-
   }
+
+  public function publish($id)
+  {
+    $category = Category::findOrFail($id);
+    $category->publication_status = 1;
+    $category->update();
+    Toastr::success('Category Publish Successfull','success');
+    return back();
+  } 
+
+  public function unpublish($id)
+  {
+    $category = Category::findOrFail($id);
+    $category->publication_status = 0;
+    $category->update();
+    Toastr::success('Category Unpublish Successfull','success');
+    return back();
+  }   
 
 }

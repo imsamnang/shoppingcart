@@ -54,11 +54,11 @@
 								</td>
 								<td class="center">
 									@if ($row->publication_status==1)
-										<a class="btn btn-danger" href="#">
+										<a class="btn btn-danger" href="{{route('admin.category.unpublish',$row->category_id)}}">
 											<i class="halflings-icon white thumbs-down"></i>  
 										</a>
 									@else
-										<a class="btn btn-success" href="#">
+										<a class="btn btn-success" href="{{route('admin.category.publish',$row->category_id)}}">
 											<i class="halflings-icon white thumbs-up"></i>
 										</a>
 									@endif
@@ -82,5 +82,5 @@
 @endsection
 
 @push('js')
-	{{-- expr --}}
+	{!! Toastr::message() !!}
 @endpush
