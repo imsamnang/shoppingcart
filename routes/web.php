@@ -1,22 +1,45 @@
 <?php
 
-// FrontEnd Site
-Route::get('/','HomeController@index')->name('home');
+/**
+===========================Front Site==========================
+ */
+Auth::routes();
+Route::get('/home','HomeController@index')->name('home');
 
-Route::get('/category', function () {
-    return view('pages.category_detail');
+
+
+
+/**
+===========================Backend Site==========================
+ */
+// admin login route
+
+Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.post');
+Route::post('/admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+
+// admn register
+Route::get('admin/register','Auth\AdminRegisterController@showRegistration')->name('admin.register');
+
+/**
+ * route only for admin profile
+ */
+Route::group(['middleware'=>'admin'], function() {
+	Route::get('/admin/dashboard', 'AdminController@dashboard')->name('dashboard');	
+});
+
+
+
+Route::get('/', function () {
+    return view('pages.home');
 });
 
 Route::get('/product', function () {
     return view('pages.product_detail');
 });
 
+Route::get('/category', function () {
+    return view('pages.category_detail');
+});
 
-
-// Backend Site
-// Route::get('/login','AdminController@login')->name('login');
-Route::get('/register','AdminController@register')->name('register');
-Route::get('/cpanel','AdminController@showDashboard')->name('dashboard');
-Route::post('/admin_dashboard','AdminController@dashboard');53.
-Auth::routes();
 

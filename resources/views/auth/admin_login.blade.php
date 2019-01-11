@@ -14,13 +14,13 @@
             <span class="white" id="id-text2">Application</span>
         </h1>
         <h4 class="red" id="id-company-text">
-          <?php 
+{{--           <?php 
             $message = Session::get('message');
             if($message){
               echo $message;
               Session::put('message',null);
             }
-          ?>
+          ?> --}}
         </h4>
       </div>
       <div class="space-10"></div>
@@ -33,7 +33,7 @@
                     Please Enter Your Information
                 </h4>
                 <div class="space-6"></div>
-                <form method="POST" action="{{url('/admin_dashboard')}}">
+                <form method="POST" action="{{route('admin.login.post')}}">
                   {{csrf_field()}}
                   <fieldset>                    
                     <label class="block clearfix">
@@ -103,7 +103,7 @@
                     @endif  
                   </div>
                   <div>
-                      <a href="{{route('register')}}" class="user-signup-link">
+                      <a href="{{route('admin.register')}}" class="user-signup-link">
                           I want to register
                           <i class="ace-icon fa fa-arrow-right"></i>
                       </a>

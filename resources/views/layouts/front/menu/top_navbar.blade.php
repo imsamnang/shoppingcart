@@ -61,6 +61,13 @@
                   <li><a href="#">Checkout</a></li>
                   <li><a href="#">Compare</a></li>
                   <li><a href="#">Login/Register</a></li>
+                  <li><a href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">Log Out</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                        </form>                          
+                  </li>
                 </ul>
               </div>
             </li>
