@@ -1,5 +1,7 @@
 <?php
 
+Route::view('/flaty','layouts.admin.flaty_layout');
+Route::view('/metro','layouts.admin.admin_layout');
 /**
 ===========================Front Site==========================
  */

@@ -16,56 +16,56 @@
   <div class="block-section-top block-section-top1">
     <div class="container">
       <div class="box-section-top">    
-        @include('includes.section_top')
+        @include('includes.front.section_top')
       </div>
     </div>
   </div>
   {{-- box-section-top --}}
 
   {{-- block-service --}}
-    {{-- @include('includes.block_service') --}}
+    @include('includes.front.block_service')
   {{-- block-service --}}
 
   {{-- Best Sallers --}}
-    {{-- @include('includes.best_saller') --}}
+    @include('includes.front.best_saller')
   {{-- Best Sallers --}}
 
     <div class="clearfix" style="background-color: #eeeeee;margin-bottom: 40px; padding-top:30px;">
       <!-- block -floor -products / floor 1 :Fashion-->
-        {{-- @include('includes.fashion') --}}
+        @include('includes.front.fashion')
       <!-- block -floor -products / floor 1 :Fashion-->
 
       {{-- Sports --}}
-        {{-- @include('includes.sports') --}}
+        @include('includes.front.sports')
       {{-- Sports --}}
 
       {{-- Electronics --}}
-        {{-- @include('includes.electronic') --}}
+        @include('includes.front.electronic')
       {{-- Electronics --}}
 
       {{-- Digital --}}
-        {{-- @include('includes.digital') --}}
+        @include('includes.front.digital')
       {{-- Digital --}}
 
       {{-- Fornitures --}}
-        {{-- @include('includes.furniture') --}}
+        @include('includes.front.furniture')
       {{-- Fornitures --}}
 
       {{-- jewelry --}}
-        {{-- @include('includes.jewelry') --}}
+        @include('includes.front.jewelry')
       {{-- jewelry --}}
 
       <!-- Banner -->
-        {{-- @include('includes.banner') --}}
+        @include('includes.front.banner')
       <!-- Banner -->
     </div>
 
   <!-- block  showcase-->
-    {{-- @include('includes.showcase') --}}
+    @include('includes.front.showcase')
   <!-- block  showcase-->
 
   <!-- block  hot categories-->
-    @include('includes.hot_categories')
+    @include('includes.front.hot_categories')
   <!--block  hot categories-->
 @endsection
 

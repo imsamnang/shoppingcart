@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  @include('includes.head')
+  @include('includes.front.head')
 </head>
 <body class="cms-index-index index-opt-1 catalog-category-view catalog-view_op1 catalog-product-view catalog-view_op1">
   <div class="wrapper">
     
-    @include('includes.header')
+    @include('includes.front.header')
 
   <!-- MAIN -->
   <main class="site-main">
@@ -14,7 +14,7 @@
   </main>
   <!-- end MAIN -->
 
-  @include('includes.footer')
+  @include('includes.front.footer')
 
 {{-- Js File --}}
   <!-- jQuery -->    

@@ -1,4 +1,4 @@
-@extends('layouts.admin.admin_layout')
+@extends('layouts.admin.flaty_layout')
 
 @section('title','Admin Dashboard')
 
@@ -7,14 +7,8 @@
 @endpush
 
 @section('admin-content')
-	<ul class="breadcrumb">
-		<li>
-			<i class="icon-home"></i>
-			<a href="index.html">Home</a> 
-			<i class="icon-angle-right"></i>
-		</li>
-		<li><a href="#">Dashboard</a></li>
-	</ul>
+	@section('menu-title','Dashboard')
+	@section('form-title','Dashboard')
 @endsection
 
 @push('js')
