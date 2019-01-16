@@ -32,6 +32,26 @@ class CategoryController extends Controller
 		return back();
   }
 
+  public function show($id)
+  {
+      //
+  }
+
+  public function edit($id)
+  {
+      //
+  }
+
+  public function update(Request $request, $id)
+  {
+      //
+  }
+
+  public function destroy($id)
+  {
+      //
+  }
+    
   public function publish($id)
   {
     $category = Category::findOrFail($id);
