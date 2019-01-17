@@ -24,7 +24,7 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        //
+
     }
 
     public function edit($id)
@@ -41,4 +41,51 @@ class ProductController extends Controller
     {
         //
     }
+
+    public function import_product()
+    {
+      return view('admin.product.import_product');
+    }
+
+    public function print_barcodes()
+    {
+      return view('admin.product.print_barcodes');
+    }
+
+    public function using_stocks()
+    {
+      return view('admin.product.using_stocks');
+    } 
+
+    public function stock_counts()
+    {
+      return view('admin.product.using_stocks');
+    } 
+
+    public function quantity_adjustments()
+    {
+      return view('admin.product.quantity_adjustments');
+    } 
+
+    public function cost_adjustments()
+    {
+      return view('admin.product.cost_adjustments');
+    } 
+
+    public function converts()
+    {
+      return view('admin.product.converts');
+    } 
+
+    public function transfers()
+    {
+      return view('admin.product.transfers');
+    }
+
+
+
+
+    
+
+
 }
