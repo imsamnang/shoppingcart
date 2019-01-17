@@ -2,6 +2,10 @@
 
 Route::view('/flaty','layouts.admin.flaty_layout');
 Route::view('/metro','layouts.admin.admin_layout');
+Route::view('/sma','layouts.admin.sma_layout');
+Route::resource('/product','Admin\ProductController');
+Route::resource('/category','Admin\CategoryController');
+
 /**
 ===========================Front Site==========================
  */

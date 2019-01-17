@@ -6,13 +6,13 @@
           <button class="navbar-toggle btn" type="button" data-toggle="collapse" data-target="#sidebar_menu">
             <span class="fa fa-bars"></span>
           </button>
-          <a href="http://localhost/project_full/stmav3/admin/calendar" class="btn">
+          <a href="#" class="btn">
             <span class="fa fa-calendar"></span>
           </a>
-          <a href="http://localhost/project_full/stmav3/admin/users/profile/1" class="btn">
+          <a href="#" class="btn">
             <span class="fa fa-user"></span>
           </a>
-          <a href="http://localhost/project_full/stmav3/admin/logout" class="btn">
+          <a href="#" class="btn">
             <span class="fa fa-sign-out"></span>
           </a>
         </div>
@@ -20,7 +20,7 @@
           <ul class="nav navbar-nav pull-right">
             <li class="dropdown">
               <a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
-                <img alt="" src="http://localhost/project_full/stmav3/assets/images/male.png" class="mini_avatar img-rounded">
+                <img alt="" src="{{asset('assets/sma/images/male.png')}}" class="mini_avatar img-rounded">
 
                 <div class="user">
                   <span>Welcome owner</span>
@@ -90,79 +90,93 @@
               <li class="dropdown hidden-xs">
                 <a class="btn tip" title="Language" data-placement="bottom" data-toggle="dropdown"
                 href="#">
-                <img src="http://localhost/project_full/stmav3/assets/images/english.png" alt="">
+                <img src="{{asset('assets/sma/images/english.png')}}" alt="">
               </a>
               <ul class="dropdown-menu pull-right">
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/arabic">
-                    <img src="http://localhost/project_full/stmav3/assets/images/arabic.png" class="language-img">
-                  &nbsp;&nbsp;Arabic                                    </a>
+                    <img src="{{asset('assets/sma/images/arabic.png')}}" class="language-img">
+                  &nbsp;&nbsp;Arabic                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/english">
-                    <img src="http://localhost/project_full/stmav3/assets/images/english.png" class="language-img">
-                  &nbsp;&nbsp;English                                    </a>
+                    <img src="{{asset('assets/sma/images/english.png')}}" class="language-img">
+                  &nbsp;&nbsp;English                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/french">
-                    <img src="http://localhost/project_full/stmav3/assets/images/french.png" class="language-img">
-                  &nbsp;&nbsp;French                                    </a>
+                    <img src="{{asset('assets/sma/images/french.png')}}" class="language-img">
+                  &nbsp;&nbsp;French                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/german">
-                    <img src="http://localhost/project_full/stmav3/assets/images/german.png" class="language-img">
-                  &nbsp;&nbsp;German                                    </a>
+                    <img src="{{asset('assets/sma/images/german.png')}}" class="language-img">
+                  &nbsp;&nbsp;German                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/indonesian">
-                    <img src="http://localhost/project_full/stmav3/assets/images/indonesian.png" class="language-img">
-                  &nbsp;&nbsp;Indonesian                                    </a>
+                    <img src="{{asset('assets/sma/images/indonesian.png')}}" class="language-img">
+                  &nbsp;&nbsp;Indonesian                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/italian">
-                    <img src="http://localhost/project_full/stmav3/assets/images/italian.png" class="language-img">
-                  &nbsp;&nbsp;Italian                                    </a>
+                    <img src="{{asset('assets/sma/images/italian.png')}}" class="language-img">
+                  &nbsp;&nbsp;Italian                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/portuguese-brazilian">
-                    <img src="http://localhost/project_full/stmav3/assets/images/portuguese-brazilian.png" class="language-img">
-                  &nbsp;&nbsp;Portuguese-brazilian                                    </a>
+                    <img src="{{asset('assets/sma/images/portuguese-brazilian.png')}}" class="language-img">
+                  &nbsp;&nbsp;Portuguese-brazilian                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/simplified-chinese">
-                    <img src="http://localhost/project_full/stmav3/assets/images/simplified-chinese.png" class="language-img">
-                  &nbsp;&nbsp;Simplified-chinese                                    </a>
+                    <img src="{{asset('assets/sma/images/simplified-chinese.png')}}" class="language-img">
+                  &nbsp;&nbsp;Simplified-chinese                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/spanish">
-                    <img src="http://localhost/project_full/stmav3/assets/images/spanish.png" class="language-img">
-                  &nbsp;&nbsp;Spanish                                    </a>
+                    <img src="{{asset('assets/sma/images/spanish.png')}}" class="language-img">
+                  &nbsp;&nbsp;Spanish                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/thai">
-                    <img src="http://localhost/project_full/stmav3/assets/images/thai.png" class="language-img">
-                  &nbsp;&nbsp;Thai                                    </a>
+                    <img src="{{asset('assets/sma/images/thai.png')}}" class="language-img">
+                  &nbsp;&nbsp;Thai                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/traditional-chinese">
-                    <img src="http://localhost/project_full/stmav3/assets/images/traditional-chinese.png" class="language-img">
-                  &nbsp;&nbsp;Traditional-chinese                                    </a>
+                    <img src="{{asset('assets/sma/images/traditional-chinese.png')}}" class="language-img">
+                  &nbsp;&nbsp;Traditional-chinese                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/turkish">
-                    <img src="http://localhost/project_full/stmav3/assets/images/turkish.png" class="language-img">
-                  &nbsp;&nbsp;Turkish                                    </a>
+                    <img src="{{asset('assets/sma/images/turkish.png')}}" class="language-img">
+                  &nbsp;&nbsp;Turkish                                    
+                  </a>
                 </li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/language/vietnamese">
-                    <img src="http://localhost/project_full/stmav3/assets/images/vietnamese.png" class="language-img">
-                  &nbsp;&nbsp;Vietnamese                                    </a>
+                    <img src="{{asset('assets/sma/images/vietnamese.png')}}" class="language-img">
+                  &nbsp;&nbsp;Vietnamese                                    
+                  </a>
                 </li>
                 <li class="divider"></li>
                 <li>
                   <a href="http://localhost/project_full/stmav3/admin/welcome/toggle_rtl">
                     <i class="fa fa-align-left"></i>
-                  Toggle Alignment                                </a>
+                  Toggle Alignment                                
+                  </a>
                 </li>
               </ul>
             </li>
