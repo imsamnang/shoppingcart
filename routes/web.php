@@ -2,7 +2,7 @@
 
 Route::view('/flaty','layouts.admin.flaty_layout');
 Route::view('/metro','layouts.admin.admin_layout');
-Route::view('/sma','layouts.admin.sma_layout');
+Route::view('/sma','layouts.admin.sma_layout')->name('sma');
 
 // Product Route
 Route::resource('/product','Admin\ProductController');
@@ -16,9 +16,9 @@ Route::get('converts','Admin\ProductController@converts')->name('product.convert
 Route::get('transfers','Admin\ProductController@transfers')->name('product.transfers');
 
 // Loan Route
-Route::get('add_loan','Admin\LoanController@add_loan')->name('loan.add_loan');
-Route::get('list_loans','Admin\LoanController@list_loans')->name('loan.list_loans');
-Route::get('missing_loans','Admin\LoanController@missing_loans')->name('loan.missing_loans');
+Route::get('/loan/add_loan','Admin\LoanController@add_loan')->name('loan.add_loan');
+Route::get('/loan/list_loans','Admin\LoanController@list_loans')->name('loan.list_loans');
+Route::get('/loan/missing_loans','Admin\LoanController@missing_loans')->name('loan.missing_loans');
 
 // Sale Route
 Route::get('quotes','Admin\SaleController@quotes')->name('sale.quotes');
@@ -30,11 +30,11 @@ Route::get('deliveries','Admin\SaleController@deliveries')->name('sale.deliverie
 Route::get('gift_cards','Admin\SaleController@gift_cards')->name('sale.gift_cards');
 
 // Purchase Route
-Route::get('purchase_requests','Admin\SaleController@purchase_requests')->name('sale.purchase_requests');
-Route::get('purchase_orders','Admin\SaleController@purchase_orders')->name('sale.purchase_orders');
-Route::get('/purchase/purchases','Admin\SaleController@purchases')->name('sale.purchases');
-Route::get('/purchase/receives','Admin\SaleController@receives')->name('sale.receives');
-Route::get('/purchase/expenses','Admin\SaleController@expenses')->name('sale.expenses');
+Route::get('purchase_requests','Admin\PurchaseController@purchase_requests')->name('purchase.purchase_requests');
+Route::get('purchase_orders','Admin\PurchaseController@purchase_orders')->name('purchase.purchase_orders');
+Route::get('/purchase/purchases','Admin\PurchaseController@purchases')->name('purchase.purchases');
+Route::get('/purchase/receives','Admin\PurchaseController@receives')->name('purchase.receives');
+Route::get('/purchase/expenses','Admin\PurchaseController@expenses')->name('purchase.expenses');
 
 // Route accountings
 Route::get('accountings','Admin\AccountingController@accountings')->name('accountings.accountings');

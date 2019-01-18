@@ -344,17 +344,14 @@ $(document).on('click', '.qudel', function () {
             product_variant = 0;
         }
 
-        uopt = '<p style="margin: 12px 0 0 0;">n/a</p>';
-        if (item.units) {
-            uopt = $("<select id=\"punit\" name=\"punit\" class=\"form-control select\" />");
-            $.each(item.units, function () {
-                if(this.id == item.row.unit) {
-                    $("<option />", {value: this.id, text: this.name, selected:true}).appendTo(uopt);
-                } else {
-                    $("<option />", {value: this.id, text: this.name}).appendTo(uopt);
-                }
-            });
-        }
+        uopt = $("<select id=\"punit\" name=\"punit\" class=\"form-control select\" />");
+        $.each(item.units, function () {
+            if(this.id == item.row.unit) {
+                $("<option />", {value: this.id, text: this.name, selected:true}).appendTo(uopt);
+            } else {
+                $("<option />", {value: this.id, text: this.name}).appendTo(uopt);
+            }
+        });
 
         $('#poptions-div').html(opt);
         $('#punits-div').html(uopt);
@@ -373,6 +370,31 @@ $(document).on('click', '.qudel', function () {
         $('#pro_tax').text(formatMoney(pr_tax_val));
         $('#prModal').appendTo("body").modal('show');
 
+    });
+	
+	$(document).on('click', '.comment', function () {
+        var row = $(this).closest('tr');
+        var row_id = row.attr('id');
+        item_id = row.attr('data-item-id');
+        item = quitems[item_id];
+		
+        $('#irow_id').val(row_id);
+        $('#icomment').val(item.row.comment);
+        $('#iordered').val(item.row.ordered);
+        $('#iordered').select2('val', item.row.ordered);
+        $('#cmModalLabel').text(item.row.code + ' - ' + item.row.name);
+        $('#cmModal').appendTo("body").modal('show');
+    });
+
+    $(document).on('click', '#editComment', function () {
+        var row = $('#' + $('#irow_id').val());
+        var item_id = row.attr('data-item-id');
+        quitems[item_id].row.order = parseFloat($('#iorders').val()),
+        quitems[item_id].row.comment = $('#icomment').val() ? $('#icomment').val() : '',
+        localStorage.setItem('quitems', JSON.stringify(quitems));
+        $('#cmModal').modal('hide');
+        loadItems();
+        return;
     });
 
     $('#prModal').on('shown.bs.modal', function (e) {
@@ -446,7 +468,7 @@ $(document).on('click', '.qudel', function () {
                 }
             });
         }
-        if(item.units && unit != quitems[item_id].row.base_unit) {
+        if(unit != quitems[item_id].row.base_unit) {
             $.each(item.units, function(){
                 if (this.id == unit) {
                     base_quantity = unitToBaseQty($('#pquantity').val(), this);
@@ -569,7 +591,6 @@ $(document).on('click', '.qudel', function () {
         mcode = $('#mcode').val(),
         mname = $('#mname').val(),
         mtax = parseInt($('#mtax').val()),
-        munit = parseInt($('#munit').val()),
         mqty = parseFloat($('#mquantity').val()),
         mdiscount = $('#mdiscount').val() ? $('#mdiscount').val() : '0',
         unit_price = parseFloat($('#mprice').val()),
@@ -581,7 +602,7 @@ $(document).on('click', '.qudel', function () {
                 }
             });
 
-            quitems[mid] = {"id": mid, "item_id": mid, "label": mname + ' (' + mcode + ')', "row": {"id": mid, "code": mcode, "name": mname, "quantity": mqty, "price": unit_price, "unit_price": unit_price, "real_unit_price": unit_price, "tax_rate": mtax, "unit": munit, "tax_method": 0, "qty": mqty, "type": "manual", "discount": mdiscount, "serial": "", "option":""}, "tax_rate": mtax_rate, "options":false};
+            quitems[mid] = {"id": mid, "item_id": mid, "label": mname + ' (' + mcode + ')', "row": {"id": mid, "code": mcode, "name": mname, "quantity": mqty, "price": unit_price, "unit_price": unit_price, "real_unit_price": unit_price, "tax_rate": mtax, "tax_method": 0, "qty": mqty, "type": "manual", "discount": mdiscount, "serial": "", "option":""}, "tax_rate": mtax_rate, "options":false};
             localStorage.setItem('quitems', JSON.stringify(quitems));
             loadItems();
         }
@@ -589,7 +610,6 @@ $(document).on('click', '.qudel', function () {
         $('#mcode').val('');
         $('#mname').val('');
         $('#mtax').val('');
-        $('#munit').val('');
         $('#mquantity').val('');
         $('#mdiscount').val('');
         $('#mprice').val('');
@@ -724,7 +744,32 @@ function nsCustomer() {
         }
     });
 }
-
+$(document).on("change", '.slength, .swidth, .square', function () {
+        var parent = $(this).parent().parent();
+		var row = $(this).closest('tr');
+		
+		var slength = parent.find(".slength").val();
+		var swidth = parent.find(".swidth").val();
+		var square = parent.find(".square").val();
+		var quantity = (parseFloat(slength) * parseFloat(swidth)) * square;		
+		
+		item_id = row.attr('data-item-id');
+		quitems[item_id].row.slength = slength;
+		quitems[item_id].row.swidth = swidth;
+		quitems[item_id].row.square = square;
+		quitems[item_id].row.qty = quantity;
+		if(quitems[item_id].row.unit != quitems[item_id].row.base_unit) {
+		$.each(quitems[item_id].units, function(){
+				if (this.id == quitems[item_id].row.unit) {
+					quitems[item_id].row.base_quantity = unitToBaseQty(quantity, this);
+				}
+			});
+		}else{
+			quitems[item_id].row.base_quantity = quantity;
+		}
+        localStorage.setItem('quitems', JSON.stringify(quitems));
+        loadItems();		
+    });
 function nsSupplier() {
     $('#qusupplier').select2({
         minimumInputLength: 1,
@@ -764,7 +809,7 @@ function loadItems() {
 
         $("#quTable tbody").empty();
         quitems = JSON.parse(localStorage.getItem('quitems'));
-        sortedItems = (site.settings.item_addition == 1) ? _.sortBy(quitems, function(o) { return [parseInt(o.order)]; }) : quitems;
+        sortedItems = (site.settings.item_addition == 1) ? _.sortBy(quitems, function(o){return [parseInt(o.order)];}) :   quitems;
         $('#add_sale, #edit_sale').attr('disabled', false);
         $.each(sortedItems, function () {
             var item = this;
@@ -774,7 +819,8 @@ function loadItems() {
 
             var unit_price = item.row.real_unit_price;
             var product_unit = item.row.unit, base_quantity = item.row.base_quantity;
-            if(item.units && item.row.fup != 1 && product_unit != item.row.base_unit) {
+            var item_comment = item.row.comment ? item.row.comment : '';
+			if(item.row.fup != 1 && product_unit != item.row.base_unit) {
                 $.each(item.units, function(){
                     if (this.id == product_unit) {
                         base_quantity = formatDecimal(unitToBaseQty(item.row.qty, this), 4);
@@ -802,6 +848,12 @@ function loadItems() {
             } else {
                  item_discount = formatDecimal(ds);
             }
+			
+			if(item_discount>0){
+				var item_discount_percent = '('+formatDecimal((item_discount * 100)/unit_price)+'%)';
+			}else{
+				var item_discount_percent = '';
+			}
             product_discount += parseFloat(item_discount * item_qty);
 
             unit_price = formatDecimal(unit_price-item_discount);
@@ -836,20 +888,36 @@ function loadItems() {
                     sel_opt = this.name;
                 }
             });
-            var row_no = item.id;
+            var row_no = item_id;//(new Date).getTime();
             var newTr = $('<tr id="row_' + row_no + '" class="row_' + item_id + '" data-item-id="' + item_id + '"></tr>');
-            tr_html = '<td><input name="product_id[]" type="hidden" class="rid" value="' + product_id + '"><input name="product_type[]" type="hidden" class="rtype" value="' + item_type + '"><input name="product_code[]" type="hidden" class="rcode" value="' + item_code + '"><input name="product_name[]" type="hidden" class="rname" value="' + item_name + '"><input name="product_option[]" type="hidden" class="roption" value="' + item_option + '"><span class="sname" id="name_' + row_no + '">' + item_code +' - '+ item_name +(sel_opt != '' ? ' ('+sel_opt+')' : '')+'</span> <i class="pull-right fa fa-edit tip pointer edit" id="' + row_no + '" data-item="' + item_id + '" title="Edit" style="cursor:pointer;"></i></td>';
+            tr_html = '<td><input name="product_id[]" type="hidden" class="rid" value="' + product_id + '"><input name="product_type[]" type="hidden" class="rtype" value="' + item_type + '"><input name="product_code[]" type="hidden" class="rcode" value="' + item_code + '"><input name="product_name[]" type="hidden" class="rname" value="' + item_name + '"><input name="product_comment[]" type="hidden" class="rcomment" value="' + item_comment + '"><input name="product_option[]" type="hidden" class="roption" value="' + item_option + '"><span class="sname" id="name_' + row_no + '">' + item_code +' - '+ item_name +(sel_opt != '' ? ' ('+sel_opt+')' : '')+'</span> <i class="pull-right fa fa-edit tip pointer edit" id="' + row_no + '" data-item="' + item_id + '" title="Edit" style="cursor:pointer;"></i><i class="pull-right fa fa-comment'+(item_comment != '' ? '' :'-o')+' tip pointer comment" id="' + row_no + '" data-item="' + item_id + '" title="Comment" style="cursor:pointer;margin-right:5px;"></i></td>';
             tr_html += '<td class="text-right"><input class="form-control input-sm text-right rprice" name="net_price[]" type="hidden" id="price_' + row_no + '" value="' + formatDecimal(item_price) + '"><input class="ruprice" name="unit_price[]" type="hidden" value="' + unit_price + '"><input class="realuprice" name="real_unit_price[]" type="hidden" value="' + item.row.real_unit_price + '"><span class="text-right sprice" id="sprice_' + row_no + '">' + formatMoney(item_price) + '</span></td>';
-            tr_html += '<td><input class="form-control text-center rquantity" tabindex="'+((site.settings.set_focus == 1) ? an : (an+1))+'" name="quantity[]" type="text" value="' + formatQuantity2(item_qty) + '" data-id="' + row_no + '" data-item="' + item_id + '" id="quantity_' + row_no + '" onClick="this.select();"><input name="product_unit[]" type="hidden" class="runit" value="' + product_unit + '"><input name="product_base_quantity[]" type="hidden" class="rbase_quantity" value="' + base_quantity + '"></td>';
+            
+			var squantity = '';
+			if (site.settings.qty_operation == 1) {
+				var squantity = 'readonly';
+				tr_html += '<td>';										
+					tr_html += '<input type="text" value="'+(item.row.slength?parseFloat(item.row.slength):1)+'" class="form-control slength" name="slength[]" />';
+				tr_html += '</td>';
+				tr_html += '<td>';										
+					tr_html += '<input type="text" value="'+(item.row.swidth?parseFloat(item.row.swidth):1)+'" class="form-control swidth" name="swidth[]" />';
+				tr_html += '</td>';
+				tr_html += '<td>';										
+					tr_html += '<input type="text" value="'+(item.row.square?parseFloat(item.row.square):1)+'" class="form-control square" name="square[]" />';
+				tr_html += '</td>';
+			}
+			
+			tr_html += '<td><input ' + squantity + ' class="form-control text-center rquantity" tabindex="'+((site.settings.set_focus == 1) ? an : (an+1))+'" name="quantity[]" type="text" value="' + formatDecimal(item_qty) + '" data-id="' + row_no + '" data-item="' + item_id + '" id="quantity_' + row_no + '" onClick="this.select();"><input name="product_unit[]" type="hidden" class="runit" value="' + product_unit + '"><input name="product_base_quantity[]" type="hidden" class="rbase_quantity" value="' + base_quantity + '"></td>';
             if ((site.settings.product_discount == 1 && allow_discount == 1) || item_discount) {
-                tr_html += '<td class="text-right"><input class="form-control input-sm rdiscount" name="product_discount[]" type="hidden" id="discount_' + row_no + '" value="' + item_ds + '"><span class="text-right sdiscount text-danger" id="sdiscount_' + row_no + '">' + formatMoney(0 - (item_discount * item_qty)) + '</span></td>';
+                tr_html += '<td class="text-right"><input class="form-control input-sm rdiscount" name="product_discount[]" type="hidden" id="discount_' + row_no + '" value="' + item_ds + '"><span class="text-right sdiscount text-danger" id="sdiscount_' + row_no + '">' + formatMoney(0 - (item_discount * item_qty)) + item_discount_percent+'</span></td>';
             }
             if (site.settings.tax1 == 1) {
-                tr_html += '<td class="text-right"><input class="form-control input-sm text-right rproduct_tax" name="product_tax[]" type="hidden" id="product_tax_' + row_no + '" value="' + pr_tax.id + '"><span class="text-right sproduct_tax" id="sproduct_tax_' + row_no + '">' + (pr_tax_rate ? '(' + formatDecimal(pr_tax_rate) + ')' : '') + ' ' + formatMoney(pr_tax_val * item_qty) + '</span></td>';
+                tr_html += '<td class="text-right"><input class="form-control input-sm text-right rproduct_tax" name="product_tax[]" type="hidden" id="product_tax_' + row_no + '" value="' + pr_tax.id + '"><span class="text-right sproduct_tax" id="sproduct_tax_' + row_no + '">' + (pr_tax_rate ? '(' + pr_tax_rate + ')' : '') + ' ' + formatMoney(pr_tax_val * item_qty) + '</span></td>';
             }
             tr_html += '<td class="text-right"><span class="text-right ssubtotal" id="subtotal_' + row_no + '">' + formatMoney(((parseFloat(item_price) + parseFloat(pr_tax_val)) * parseFloat(item_qty))) + '</span></td>';
             tr_html += '<td class="text-center"><i class="fa fa-times tip pointer qudel" id="' + row_no + '" title="Remove" style="cursor:pointer;"></i></td>';
-            newTr.html(tr_html);
+            tr_html += '<input type="hidden" name="parent_id[]" value="'+item.row.parent_id+'" />';
+			newTr.html(tr_html);
             newTr.prependTo("#quTable");
             total += formatDecimal(((parseFloat(item_price) + parseFloat(pr_tax_val)) * parseFloat(item_qty)), 4);
             count += parseFloat(item_qty);
@@ -878,7 +946,8 @@ function loadItems() {
         });
 
         var col = 2;
-        var tfoot = '<tr id="tfoot" class="tfoot active"><th colspan="'+col+'">Total</th><th class="text-center">' + formatQty(parseFloat(count) - 1) + '</th>';
+		if (site.settings.qty_operation == 1) { col += 3 }
+        var tfoot = '<tr id="tfoot" class="tfoot active"><th colspan="'+col+'">Total</th><th class="text-center">' + formatNumber(parseFloat(count) - 1) + '</th>';
         if ((site.settings.product_discount == 1 && allow_discount == 1) || product_discount) {
             tfoot += '<th class="text-right">'+formatMoney(product_discount)+'</th>';
         }
@@ -922,7 +991,7 @@ function loadItems() {
         // Totals calculations after item addition
         var gtotal = parseFloat(((total + invoice_tax) - order_discount) + shipping);
         $('#total').text(formatMoney(total));
-        $('#titems').text((an - 1) + ' (' + formatQty(parseFloat(count) - 1) + ')');
+        $('#titems').text((an - 1) + ' (' + formatNumber(parseFloat(count) - 1) + ')');
         $('#total_items').val((parseFloat(count) - 1));
         $('#tds').text(formatMoney(order_discount));
         if (site.settings.tax2 != 0) {

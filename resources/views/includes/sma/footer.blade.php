@@ -16,21 +16,6 @@
   <div id="ajaxCall"><i class="fa fa-spinner fa-pulse"></i></div>
 
 {{-- datatable <script></script> --}}
-  <script type="text/javascript">
-    var site = {"assets":"http://localhost:8000/assets/sma/",
-                "settings":{
-                          "logo":"logo2.png","logo2":"logo3.png",
-                          "site_name":"Stock Manager Advance","language":"english",
-              },
-              "dateFormats":{"js_sdate":"dd\/mm\/yyyy",
-                            "php_sdate":"d\/m\/Y",
-                            "mysq_sdate":"%d\/%m\/%Y",
-                            "js_ldate":"dd\/mm\/yyyy hh:ii",
-                            "php_ldate":"d\/m\/Y H:i",
-                            "mysql_ldate":"%d\/%m\/%Y %H:%i"}
-            };
-  </script>
-
   <script src="{{asset('assets/sma/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('assets/sma/js/jquery.dataTables.min.js')}}"></script>
   <script src="{{asset('assets/sma/js/jquery.dataTables.dtFilter.min.js')}}"></script>
@@ -41,3 +26,24 @@
   <script src="{{asset('assets/sma/js/jquery.calculator.min.js')}}"></script>
   <script src="{{asset('assets/sma/js/core.js')}}"></script>
   <script src="{{asset('assets/sma/js/perfect-scrollbar.min.js')}}"></script>
+
+  <script type="text/javascript" charset="UTF-8">
+      var site = {"assets":"http://localhost:8000/assets/sma/",
+                  "settings":{
+                            "logo":"logo2.png","logo2":"logo3.png",
+                            "site_name":"Stock Manager Advance","language":"english",
+                },
+                "dateFormats":{"js_sdate":"dd\/mm\/yyyy",
+                              "php_sdate":"d\/m\/Y",
+                              "mysq_sdate":"%d\/%m\/%Y",
+                              "js_ldate":"dd\/mm\/yyyy hh:ii",
+                              "php_ldate":"d\/m\/Y H:i",
+                              "mysql_ldate":"%d\/%m\/%Y %H:%i"}
+              };  
+      $(window).load(function () {
+          $('.mm_<?=$m?>').addClass('active');
+          $('.mm_<?=$m?>').find("ul").first().slideToggle();
+          $('#<?=$m?>_<?=$v?>').addClass('active');
+          $('.mm_<?=$m?> a .chevron').removeClass("closed").addClass("opened");
+      });
+  </script>

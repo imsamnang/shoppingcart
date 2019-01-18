@@ -4,7 +4,7 @@ check_add_item_val();
 if (site.settings.set_focus != 1) {
     $('#add_item').focus();
 }
-// Order level shipping and discoutn localStorage
+// Order level shipping and discoutn localStorage 
 $('#tostatus').change(function (e) {
     localStorage.setItem('tostatus', $(this).val());
 });
@@ -114,7 +114,7 @@ if (from_warehouse = localStorage.getItem('from_warehouse')) {
             $('#tonote').redactor('set', tonote);
         }
 
-        $(document).on('change', '.rexpiry', function () {
+        $(document).on('change', '.rexpiry', function () { 
             var item_id = $(this).closest('tr').attr('data-item-id');
             toitems[item_id].row.expiry = $(this).val();
             localStorage.setItem('toitems', JSON.stringify(toitems));
@@ -133,8 +133,8 @@ $('body').bind('keypress', function (e) {
 });
 
 
-    /* ----------------------
-     * Delete Row Method
+    /* ---------------------- 
+     * Delete Row Method 
      * ---------------------- */
 
     $(document).on('click', '.todel', function () {
@@ -150,7 +150,7 @@ $('body').bind('keypress', function (e) {
     });
 
     /* --------------------------
-     * Edit Row Quantity Method
+     * Edit Row Quantity Method 
      -------------------------- */
      var old_row_qty;
      $(document).on("focus", '.rquantity', function () {
@@ -176,9 +176,19 @@ $('body').bind('keypress', function (e) {
         localStorage.setItem('toitems', JSON.stringify(toitems));
         loadItems();
     });
-
+	
+	$(document).on("focus", '.rserial', function () {
+    }).on("change", '.rserial', function () {
+        var row = $(this).closest('tr');
+        item_id = row.attr('data-item-id');
+		var new_serial = $(this).val();
+        toitems[item_id].row.serial = new_serial;
+        localStorage.setItem('toitems', JSON.stringify(toitems));
+        loadItems();
+    });
+    
     /* --------------------------
-     * Edit Row Cost Method
+     * Edit Row Cost Method 
      -------------------------- */
      var old_cost;
      $(document).on("focus", '.rcost', function () {
@@ -196,33 +206,30 @@ $('body').bind('keypress', function (e) {
         localStorage.setItem('toitems', JSON.stringify(toitems));
         loadItems();
     });
-
-    $(document).on("click", '#removeReadonly', function () {
-     $('#from_warehouse').select2('readonly', false);
+    
+    $(document).on("click", '#removeReadonly', function () { 
+     $('#from_warehouse').select2('readonly', false); 
      return false;
  });
-
-
+    
+    
 });
 
 /* -----------------------
- * Edit Row Modal Hanlder
+ * Edit Row Modal Hanlder 
  ----------------------- */
  $(document).on('click', '.edit', function () {
     var row = $(this).closest('tr');
     var row_id = row.attr('id');
     item_id = row.attr('data-item-id');
     item = toitems[item_id];
-    var qty = row.children().children('.rquantity').val(),
+    var qty = row.children().children('.rquantity').val(), 
     product_option = row.children().children('.roption').val(),
     cost = row.children().children('.rucost').val();
     $('#prModalLabel').text(item.row.name + ' (' + item.row.code + ')');
-    if (site.settings.tax1) {
-        var tax = item.tax_rate != 0 ? item.tax_rate.name + ' (' + item.tax_rate.rate + ')' : 'N/A';
-        $('#ptax').text(tax);
-        $('#old_tax').val($('#sproduct_tax_' + row_id).text());
-    }
-
+	if (site.settings.product_serial !== 0) {
+		$('#pserial').val(row.children().children('.rserial').val());
+	}
     var opt = '<p style="margin: 12px 0 0 0;">n/a</p>';
     if(item.options !== false) {
         var o = 1;
@@ -234,7 +241,7 @@ $('body').bind('keypress', function (e) {
             $("<option />", {value: this.id, text: this.name}).appendTo(opt);
             o++;
         });
-    }
+    } 
     uopt = $("<select id=\"punit\" name=\"punit\" class=\"form-control select\" />");
         $.each(item.units, function () {
             if(this.id == item.row.unit) {
@@ -243,6 +250,19 @@ $('body').bind('keypress', function (e) {
                 $("<option />", {value: this.id, text: this.name}).appendTo(uopt);
             }
         });
+	if(item.product_serials){
+		uopt1 = $("<select class='form-control input-tip select' data-placeholder='Select Serial' id='product_serial' name='product_serial'  />");
+		$("<option />", { value: '', text: ''}).appendTo(uopt1);		
+		$.each(item.product_serials, function () {
+			var serialno = row.children().children('.rserial').val();
+			if(this.serial == serialno) {
+				$("<option />", { value: this.id, text: this.serial, selected:true}).appendTo(uopt1);
+			} else {
+				$("<option />", { value: this.id, text: this.serial}).appendTo(uopt1);
+			}
+		});			
+		$("#pserials-div").html(uopt1);
+	}	
     $('#poptions-div').html(opt);
     $('#punits-div').html(uopt);
     $('select.select').select2({minimumResultsForSearch: 7});
@@ -289,7 +309,7 @@ $(document).on('change', '#punit', function () {
 });
 
 /* -----------------------
- * Edit Row Method
+ * Edit Row Method 
  ----------------------- */
  $(document).on('click', '#editItem', function () {
     var row = $('#' + $('#row_id').val());
@@ -317,10 +337,11 @@ $(document).on('change', '#punit', function () {
     // toitems[item_id].row.tax_rate = new_pr_tax_rate,
     toitems[item_id].row.discount = $('#pdiscount').val(),
     toitems[item_id].row.option = $('#poption').val(),
+	toitems[item_id].row.serial = $('#pserial').val();
     // toitems[item_id].row.tax_method = 1;
     localStorage.setItem('toitems', JSON.stringify(toitems));
     $('#prModal').modal('hide');
-
+    
     loadItems();
     return;
 });
@@ -354,27 +375,7 @@ $(document).on('change', '#punit', function () {
 
             var pr_tax = item.tax_rate;
             var pr_tax_val = 0, pr_tax_rate = 0;
-            if (site.settings.tax1 == 1) {
-                if (pr_tax !== false) {
-                    if (pr_tax.type == 1) {
-
-                        if (item_tax_method == '0') {
-                            pr_tax_val = formatDecimal(((unit_cost) * parseFloat(pr_tax.rate)) / (100 + parseFloat(pr_tax.rate)), 4);
-                            pr_tax_rate = formatDecimal(pr_tax.rate) + '%';
-                        } else {
-                            pr_tax_val = formatDecimal(((unit_cost) * parseFloat(pr_tax.rate)) / 100, 4);
-                            pr_tax_rate = formatDecimal(pr_tax.rate) + '%';
-                        }
-
-                    } else if (pr_tax.type == 2) {
-
-                        pr_tax_val = parseFloat(pr_tax.rate);
-                        pr_tax_rate = pr_tax.rate;
-
-                    }
-                    product_tax += pr_tax_val * item_qty;
-                }
-            }
+            
             item_cost = item_tax_method == 0 ? formatDecimal(unit_cost-pr_tax_val, 4) : formatDecimal(unit_cost);
             unit_cost = formatDecimal(unit_cost+item_discount, 4);
             var sel_opt = '';
@@ -384,19 +385,19 @@ $(document).on('change', '#punit', function () {
                 }
             });
 
-            var row_no = item.id;
+            var row_no = item_id;//(new Date).getTime();
             var newTr = $('<tr id="row_' + row_no + '" class="row_' + item_id + '" data-item-id="' + item_id + '"></tr>');
             tr_html = '<td><input name="product_id[]" type="hidden" class="rid" value="' + product_id + '"><input name="product_type[]" type="hidden" class="rtype" value="' + item_type + '"><input name="product_code[]" type="hidden" class="rcode" value="' + item_code + '"><input name="product_name[]" type="hidden" class="rname" value="' + item_name + '"><input name="product_option[]" type="hidden" class="roption" value="' + item_option + '"><span class="sname" id="name_' + row_no + '">' + item_code +' - '+ item_name +(sel_opt != '' ? ' ('+sel_opt+')' : '')+'</span> <i class="pull-right fa fa-edit tip tointer edit" id="' + row_no + '" data-item="' + item_id + '" title="Edit" style="cursor:pointer;"></i></td>';
             if (site.settings.product_expiry == 1) {
                 tr_html += '<td><input class="form-control date rexpiry" name="expiry[]" type="text" value="' + item_expiry + '" data-id="' + row_no + '" data-item="' + item_id + '" id="expiry_' + row_no + '"></td>';
             }
-            tr_html += '<td class="text-right"><input class="form-control input-sm text-right rcost" name="net_cost[]" type="hidden" id="cost_' + row_no + '" value="' + formatDecimal(item_cost) + '"><input class="rucost" name="unit_cost[]" type="hidden" value="' + unit_cost + '"><input class="realucost" name="real_unit_cost[]" type="hidden" value="' + item.row.real_unit_cost + '"><span class="text-right scost" id="scost_' + row_no + '">' + formatMoney(item_cost) + '</span></td>';
-            tr_html += '<td><input name="quantity_balance[]" type="hidden" class="rbqty" value="' + formatDecimal(item_bqty, 4) + '"><input name="ordered_quantity[]" type="hidden" class="roqty" value="' + formatDecimal(item_oqty, 4) + '"><input class="form-control text-center rquantity" tabindex="'+((site.settings.set_focus == 1) ? an : (an+1))+'" name="quantity[]" type="text" value="' + formatQuantity2(item_qty) + '" data-id="' + row_no + '" data-item="' + item_id + '" id="quantity_' + row_no + '" onClick="this.select();"><input name="product_unit[]" type="hidden" class="runit" value="' + product_unit + '"><input name="product_base_quantity[]" type="hidden" class="rbase_quantity" value="' + base_quantity + '"></td>';
-            if (site.settings.tax1 == 1) {
-                tr_html += '<td class="text-right"><input class="form-control input-sm text-right rproduct_tax" name="product_tax[]" type="hidden" id="product_tax_' + row_no + '" value="' + pr_tax.id + '"><span class="text-right sproduct_tax" id="sproduct_tax_' + row_no + '">' + (pr_tax_rate ? '(' + formatDecimal(pr_tax_rate) + ')' : '') + ' ' + formatMoney(pr_tax_val * item_qty) + '</span></td>';
+			if (site.settings.product_serial == 1) {
+                tr_html += '<td class="text-right"><input readonly="true" class="form-control input-sm rserial" name="serial[]" type="text" id="serial_' + row_no + '" value="'+item_serial+'"></td>';
             }
-            tr_html += '<td class="text-right"><span class="text-right ssubtotal" id="subtotal_' + row_no + '">' + formatMoney(((parseFloat(item_cost) - item_discount + parseFloat(pr_tax_val)) * parseFloat(item_qty))) + '</span></td>';
-            tr_html += '<td class="text-center"><i class="fa fa-times tip todel" id="' + row_no + '" title="Remove" style="cursor:pointer;"></i></td>';
+
+            tr_html += '<td><input name="quantity_balance[]" type="hidden" class="rbqty" value="' + formatDecimal(item_bqty, 4) + '"><input name="ordered_quantity[]" type="hidden" class="roqty" value="' + formatDecimal(item_oqty, 4) + '"><input class="form-control text-center rquantity" tabindex="'+((site.settings.set_focus == 1) ? an : (an+1))+'" name="quantity[]" type="text" value="' + formatDecimal(item_qty) + '" data-id="' + row_no + '" data-item="' + item_id + '" id="quantity_' + row_no + '" onClick="this.select();"><input name="product_unit[]" type="hidden" class="runit" value="' + product_unit + '"><input name="product_base_quantity[]" type="hidden" class="rbase_quantity" value="' + base_quantity + '"></td>';
+            
+			tr_html += '<td class="text-center"><i class="fa fa-times tip todel" id="' + row_no + '" title="Remove" style="cursor:pointer;"></i></td>';
             newTr.html(tr_html);
             newTr.prependTo("#toTable");
             total += formatDecimal(((parseFloat(item_cost) + parseFloat(pr_tax_val)) * parseFloat(item_qty)), 4);
@@ -404,34 +405,32 @@ $(document).on('change', '#punit', function () {
             an++;
             if (item.options !== false) {
                 $.each(item.options, function () {
+	
                     if(this.id == item_option && base_quantity > this.quantity) {
                         $('#row_' + row_no).addClass('danger');
-                        $('#add_transfer, #edit_transfer').attr('disabled', true);
+                        $('#add_transfer, #edit_transfer').attr('disabled', true); 
                     }
                 });
-            } else if(base_quantity > item_aqty) {
+            } else if(base_quantity > item_aqty) { 
                 $('#row_' + row_no).addClass('danger');
-                $('#add_transfer, #edit_transfer').attr('disabled', true);
+                $('#add_transfer, #edit_transfer').attr('disabled', true); 
             }
-
+            
         });
 
-        var col = 2;
+		var col = 1;
         if (site.settings.product_expiry == 1) { col++; }
-        var tfoot = '<tr id="tfoot" class="tfoot active"><th colspan="'+col+'">Total</th><th class="text-center">' + formatQty(parseFloat(count) - 1) + '</th>';
-        if (site.settings.tax1 == 1) {
-            tfoot += '<th class="text-right">'+formatMoney(product_tax)+'</th>';
-        }
-        tfoot += '<th class="text-right">'+formatMoney(total)+'</th><th class="text-center"><i class="fa fa-trash-o" style="opacity:0.5; filter:alpha(opacity=50);"></i></th></tr>';
+		if (site.settings.product_serial == 1) { col++; }
+        var tfoot = '<tr id="tfoot" class="tfoot active"><th colspan="'+col+'" >Total</th><th class="text-center">' + formatNumber(parseFloat(count) - 1) + '</th>';
+   
+        tfoot += '<th class="text-center"><i class="fa fa-trash-o" style="opacity:0.5; filter:alpha(opacity=50);"></i></th></tr>';
         $('#toTable tfoot').html(tfoot);
 
         // Totals calculations after item addition
         var gtotal = total + shipping;
         $('#total').text(formatMoney(total));
-        $('#titems').text((an-1)+' ('+(formatQty(parseFloat(count) - 1))+')');
-        if (site.settings.tax1) {
-            $('#ttax1').text(formatMoney(product_tax));
-        }
+        $('#titems').text((an-1)+' ('+(parseFloat(count)-1)+')');
+
         $('#gtotal').text(formatMoney(gtotal));
         if (an > parseInt(site.settings.bc_fix) && parseInt(site.settings.bc_fix) > 0) {
             $("html, body").animate({scrollTop: $('#sticker').offset().top}, 500);
@@ -492,3 +491,15 @@ if (typeof (Storage) === "undefined") {
         }
     });
 }
+
+$(document).on('change', '#product_serial', function () {
+	var row = $('#' + $('#row_id').val());
+	var item_id = row.attr('data-item-id');
+	var item = toitems[item_id];
+	var serialno = [];
+	$.each(item.product_serials, function(){
+		serialno[this.id] = this.serial;
+	});
+	$('#pserial').val(serialno[$(this).val()]);
+
+});

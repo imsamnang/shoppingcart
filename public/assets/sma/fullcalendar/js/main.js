@@ -111,7 +111,12 @@ $(document).ready(function(){
         $('#end').val(end);
         $('#description').val(data.event ? data.event.description : '');
         $('#color').val(data.event ? data.event.color : '#3a87ad');
-
+		
+		if(site.settings.login_time > 0){
+			var holiday = (data.event.holiday?data.event.holiday:0);
+			$("#holiday").select2('val', holiday);
+		}
+		
         $.each(data.buttons, function(index, button){
             $('.modal-footer').prepend('<button type="button" id="' + button.id  + '" class="btn ' + button.css + '">' + button.label + '</button>')
         })
@@ -128,6 +133,7 @@ $(document).ready(function(){
                 color: $('#color').val(),
                 start: $('#start').val(),
                 end: $('#end').val(),
+				holiday: $('#holiday').val(),
             };
             edata[tkname] = tkvalue;
             $.post(site.base_url+'calendar/add_event', edata, function(result){
@@ -147,6 +153,7 @@ $(document).ready(function(){
                 color: $('#color').val(),
                 start: $('#start').val(),
                 end: $('#end').val(),
+				holiday: $('#holiday').val(),
             };
             edata[tkname] = tkvalue;
             $.post(site.base_url+'calendar/update_event', edata, function(result){

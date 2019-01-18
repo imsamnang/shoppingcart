@@ -1,5 +1,5 @@
     <meta charset="utf-8">
-    <base href="http://localhost/project_full/stmav3/"/>
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Dashboard - Tinhtoday Shopping Cart')</title>
     <link rel="shortcut icon" href="{{asset('assets/sma/images/icon.png')}}"/>

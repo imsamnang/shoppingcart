@@ -1,5 +1,36 @@
 /* Basic Styles
-=================================================================== */
+=====================================*/
+/* .ui-autocomplete {
+	max-height: 400px !important;
+	overflow-y: auto !important;
+	overflow-x: hidden !important;
+} */
+.table-responsive .table{
+	white-space:nowrap;
+	font-size:12px;	
+}
+.table-responsive .table td, th{
+	text-transform:capitalize !important;
+}
+.nav.main-menu > li > a, 
+.nav.main-menu > li > ul > li > a, 
+.nav.main-menu > li > ul > li > ul > li > a, 
+.nav.main-menu > li > ul > li > ul > li > ul > li > a{
+	background:#40454a;
+}
+.nav.main-menu > li > a{
+	text-transform: uppercase !important;
+}
+.nav.main-menu > li > ul > li > a{
+	text-transform: capitalize !important;
+}
+.camount{
+	background:#EC971F !important;
+	font-size:20px;
+	color:#FFF;
+	text-align:right;
+}
+/*===================================*/
 * {
     padding: 0;
     margin: 0;
@@ -25,17 +56,17 @@ h1 {
     font-weight: bold;
 }
 h2 {
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
     font-weight: bold;
 }
 h3 {
-    font-size: 15px;
-    line-height: 15px;
-}
-h4 {
     font-size: 14px;
     line-height: 14px;
+}
+h4 {
+    font-size: 13px;
+    line-height: 13px;
 }
 h5 {
     font-size: 13px;
@@ -69,11 +100,11 @@ h6 {
 .lt td {
     vertical-align: top;
 }
-.lt td.sidebar-con {
+.lt td.sidebar-con { 
     width: 250px;
     background-color: #000;
 }
-.sidebar-minified .lt td.sidebar-con {
+.sidebar-minified .lt td.sidebar-con { 
     width: 0px;
 }
 #content {
@@ -209,7 +240,6 @@ h6 {
     text-decoration: none;
 }
 .box-icon .choose-date {
-    border-color: #ced1d4;
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -283,7 +313,7 @@ h6 {
     color: rgba(255, 255, 255, 0.4);
     font-weight: normal;
 }
-.small-box .icon {
+.small-box i {
     position: absolute;
     top:-10px;
     right: -5px;
@@ -754,8 +784,8 @@ a#main-menu-act i:hover {
     margin: -9px -25px;
     border: none;
     padding-bottom: 1px;
-    font-size: 14px;
-    white-space: nowrap;
+    font-size: 12px;
+    white-space: nowrap !important;
 }
 .sidebar-nav > ul > li {
 
@@ -778,7 +808,7 @@ a#main-menu-act i:hover {
     color: #CCC;
     border: none;
     border-bottom: 1px solid #111;
-    background: #000;
+    /***background: #3f4c6b;***/
     border-radius: 0px;
     text-decoration: none;
     display: block;
@@ -1002,12 +1032,15 @@ a#main-menu-act i:hover {
         border: 1px solid #dddddd;
         -webkit-overflow-scrolling: touch;
     }*/
-    .table-responsive .table td:last-child, .table-responsive .table th:last-child { display: none; }
+	.btn-group .btn{
+		width:100% !important;
+	}
+    /*.table-responsive .table td:last-child, .table-responsive .table th:last-child { display: none; }
     .table-responsive .reports-table th:last-child, .table-responsive .reports-table td:last-child { display: table-cell !important; }
     .table-responsive .col-md-6.text-left, .table-responsive .col-md-6.text-right { text-align: center !important; }
     .table-responsive .table.dfTable td:last-child, .table-responsive .table.dfTable th:last-child,
     .modal-body .table-responsive .table th:last-child, .modal-body .table-responsive .table td:last-child { display: table-cell; }
-    .order-table th:last-child, .order-table td:last-child { display: table-cell !important; }
+    .order-table th:last-child, .order-table td:last-child { display: table-cell !important; }*/
 }
 /* Tabs Styles
 =================================================================== */
@@ -1517,7 +1550,7 @@ label { margin-top: 5px;
 .supplier_details_link td:last-child {
     cursor: default;
 }
-.purchase_link, .transfer_link, .invoice_link, .quote_link, .delivery_link, .return_link, .return_purchase_link, .receipt_link, .payment_link, .payment_link2, .invoice_link2, .purchase_link2, .expense_link2, .transfer_link2, .quote_link2, .row_status, .adjustment_link, .adjustment_link2 {
+.purchase_link, .transfer_link, .sale_order_link, .invoice_link, .quote_link, .delivery_link, .return_link, .return_purchase_link, .receipt_link, .payment_link, .payment_link2, .invoice_link2, .purchase_link2, .expense_link2, .transfer_link2, .quote_link2, .row_status, .adjustment_link, .cost_adjustment_link, .adjustment_link2, .cost_adjustment_link2 {
     cursor: pointer;
 }
 .purchase_link td:first-child,
@@ -1532,6 +1565,10 @@ label { margin-top: 5px;
 .invoice_link td:last-child,
 .invoice_link td:nth-last-child(2),
 .invoice_link td:nth-child(6),
+.sale_order_link td:first-child,
+.sale_order_link td:last-child,
+.sale_order_link td:nth-last-child(2),
+.sale_order_link td:nth-child(6),
 .receipt_link td:first-child,
 .receipt_link td:last-child,
 .quote_link td:first-child,
@@ -1545,6 +1582,12 @@ label { margin-top: 5px;
 .adjustment_link td:first-child,
 .adjustment_link td:last-child,
 .adjustment_link td:nth-last-child(2),
+.cost_adjustment_link td:first-child,
+.cost_adjustment_link td:last-child,
+.cost_adjustment_link td:nth-last-child(2),
+.enter_journal_link td:first-child,
+.enter_journal_link td:last-child,
+.enter_journal_link td:nth-last-child(2),
 .expense_link2 td:last-child {
     cursor: default;
 }
@@ -1734,7 +1777,6 @@ legend.scheduler-border {
 
 /* Listing page tables
 =============================================================== */
-#SLData, #POData, #PRData, #GCData, #POSData, #DOData, #QUData, #TOData, #PrRData, #SRData, #SRData, #SlRData, #PoRData, #PayRData, #RESLData, #registerTable, #SupData, #CusData { width: 100% !important; }
 #GCData th, #QUData th { width: 15%; }
 #SLData th { width: 13%; }
 #POData th, #TOData th { width: 15%; }
@@ -1893,7 +1935,7 @@ animation: blink 1s steps(2, start) infinite;
     .padding05 {
         padding: 0;
     }
-    .lt td.sidebar-con {
+    .lt td.sidebar-con { 
         width: 40px;
     }
     .content-scroll { width: 300px; }
@@ -1949,7 +1991,7 @@ animation: blink 1s steps(2, start) infinite;
     .header-nav li {
         float: left;
     }
-    .lt td.sidebar-con {
+    .lt td.sidebar-con { 
         width: 0px;
     }
     .lt td.content-con {
@@ -2001,9 +2043,6 @@ animation: blink 1s steps(2, start) infinite;
     body {
         padding: 0px;
     }
-    header {
-        text-align: center;
-    }
     .col-xxs-12 {
         width: 100%;
     }
@@ -2012,8 +2051,10 @@ animation: blink 1s steps(2, start) infinite;
         text-align: center;
     }
     .btn-visible-sm {
-        display: inline-block !important;
+        width:90px;
         float: none !important;
+        margin-left: auto;
+        margin-right: auto;
     }
     .sidebar-nav > ul {
         margin: 0;
