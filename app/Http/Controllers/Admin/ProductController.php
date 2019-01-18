@@ -9,12 +9,12 @@ class ProductController extends Controller
 {
     public function index()
     {
-      return view('admin.product.index');
+      return view('admin.products.index');
     }
 
     public function create()
     {
-      return view('admin.product.create');
+      return view('admin.products.create');
     }
 
     public function store(Request $request)
@@ -44,42 +44,42 @@ class ProductController extends Controller
 
     public function import_product()
     {
-      return view('admin.product.import_product');
+      return view('admin.products.import_product');
     }
 
     public function print_barcodes()
     {
-      return view('admin.product.print_barcodes');
+      return view('admin.products.print_barcodes');
     }
 
     public function using_stocks()
     {
-      return view('admin.product.using_stocks');
+      return view('admin.products.using_stocks');
     } 
 
     public function stock_counts()
     {
-      return view('admin.product.using_stocks');
+      return view('admin.products.using_stocks');
     } 
 
     public function quantity_adjustments()
     {
-      return view('admin.product.quantity_adjustments');
+      return view('admin.products.quantity_adjustments');
     } 
 
     public function cost_adjustments()
     {
-      return view('admin.product.cost_adjustments');
+      return view('admin.products.cost_adjustments');
     } 
 
     public function converts()
     {
-      return view('admin.product.converts');
+      return view('admin.products.converts');
     } 
 
     public function transfers()
     {
-      return view('admin.product.transfers');
+      return view('admin.products.transfers');
     }
 
 
