@@ -40,10 +40,5 @@
                               "php_ldate":"d\/m\/Y H:i",
                               "mysql_ldate":"%d\/%m\/%Y %H:%i"}
               };  
-      $(window).load(function () {
-          $('.mm_<?=$m?>').addClass('active');
-          $('.mm_<?=$m?>').find("ul").first().slideToggle();
-          $('#<?=$m?>_<?=$v?>').addClass('active');
-          $('.mm_<?=$m?> a .chevron').removeClass("closed").addClass("opened");
-      });
+
   </script>

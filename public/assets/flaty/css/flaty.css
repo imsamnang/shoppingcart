@@ -1,10 +1,3 @@
-/*
-* Theme Name:  FLATY
-* Description: FLATY - Premium Responsive Admin Template
-* Author:      ShaMSofT
-* Version:     2.2.1
-*/
-
 /* ========================================================
    General
 ======================================================== */
@@ -22,7 +15,7 @@ body {
     padding-bottom: 0;
     min-height: 100%;
     font-family: 'Open Sans';
-    font-size: 15px;
+    font-size: 13px;
     color: #393939;
     -webkit-font-smoothing: antialiased;
 }
@@ -92,7 +85,7 @@ h2.smaller {font-size: 25px;}
 h2.bigger  {font-size: 27px;}
 h2.block   {margin-bottom: 16px;}
 h3 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
     margin: 8px 0;
 }
@@ -220,7 +213,7 @@ hr.margin-0  {margin: 0;}
     text-shadow: none;
     padding-top: 9px;
     height: 40px;
-    min-width: 200px;
+    min-width: 240px;
 }
 .navbar .navbar-btn:focus,
 .navbar .navbar-btn {
@@ -242,7 +235,7 @@ hr.margin-0  {margin: 0;}
 .navbar .nav > li > a,
 .navbar .nav > li > a:hover,
 .navbar .nav > li > a:focus {
-    font-size: 15px;
+    font-size: 13px;
     text-shadow: none;
 }
 .flaty-nav {
@@ -337,14 +330,14 @@ hr.margin-0  {margin: 0;}
     text-shadow: none;
     padding: 0 15px;
     padding-right: 6px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     text-transform: none;
 }
 .dropdown-navbar > li.nav-header > [class*="fa-"] {
     color: #fff;
     float: right;
-    margin-top: 14px;
+    margin-top: 13px;
 }
 .dropdown-navbar > li > [class*="fa-"],
 .dropdown-navbar > li > a > [class*="fa-"] {
@@ -355,7 +348,7 @@ hr.margin-0  {margin: 0;}
 .dropdown-navbar > li > a {
     padding: 10px 2px;
     margin: 0;
-    font-size: 14   px;
+    font-size: 12px;
     line-height: 16px;
     color: #9ca7b9;
 }
@@ -494,13 +487,13 @@ hr.margin-0  {margin: 0;}
    Sidebar
 ======================================================== */
 #sidebar {
-    width: 200px;
+    width: 240px;
     position: absolute;
 }
 #sidebar:before {
     content: "";
     display: block;
-    width: 200px;
+    width: 240px;
     position: fixed;
     bottom: 0;
     top: 0;
@@ -511,7 +504,7 @@ hr.margin-0  {margin: 0;}
     z-index: 10;
 }
 #sidebar+#main-content {
-    margin-left: 200px;
+    margin-left: 240px;
 }
 .navbar-collapse {
     padding-right: 0;
@@ -540,7 +533,9 @@ hr.margin-0  {margin: 0;}
     display: block;
     padding: 0;
     margin: 0;
-    border: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(50, 118, 177);
     position: relative;
 }
 .nav-list .search-form {
@@ -582,7 +577,7 @@ hr.margin-0  {margin: 0;}
     padding: 0 16px 0 7px!important;
     color: #fff!important;
     text-shadow: none!important;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
 }
 .nav-list .search-pan button > i,
@@ -620,7 +615,7 @@ hr.margin-0  {margin: 0;}
 .nav-list > li.active > a:focus,
 .nav-list > li.active > a:active {
     font-weight: bold!important;
-    font-size: 15px;
+    font-size: 13px;
 }
 .nav-list > li.active > a > [class*="fa-"] {
     font-weight: normal;
@@ -655,10 +650,15 @@ hr.margin-0  {margin: 0;}
 .nav-list > li .submenu > li > a,
 .nav-list > li .submenu > li > span,
 .nav-list > li .submenu > li > ul > li > a {
+    height: 35px;
     display: block;
     position: relative;
     padding: 7px 0 8px 42px;
     margin: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(50, 118, 177);
+
 }
 .nav-list > li .submenu > li > a:focus,
 .nav-list > li .submenu > li > a:hover {
@@ -942,8 +942,8 @@ hr.margin-0  {margin: 0;}
 }
 .box .box-title .box-tool {
     position: absolute;
-	top: 10px;
-	right: 10px;
+  top: 10px;
+  right: 10px;
     display: inline-block;
     float: right;
     line-height: 20px;
@@ -1526,7 +1526,7 @@ Bordered form layout
 .dropdown-menu > li > a {
     padding: 6px 2px;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
     color: #444;
     text-shadow: none;
@@ -2298,8 +2298,8 @@ a.btn {
 
 /* Breadcrumb  ------------------------------------------ */
 .breadcrumb {
-    background: rgba(52, 152, 219);
-    color: #000;
+    background: rgba(255,255,255,0.7);
+    color: #999;
     border-radius: 0;
 }
 .breadcrumb i {
@@ -2310,14 +2310,14 @@ a.btn {
     padding-left: 5px;
 }
 .breadcrumb a {
-    color: #fff;
+    color: #999;
 }
 .breadcrumb a:hover {
     color: #444;
     text-decoration: none;
 }
 .breadcrumb > li.active {
-    color: #fff;
+    color: #222;
 }
 .breadcrumb > li + li:before {
     display: none;
@@ -4720,11 +4720,11 @@ div.tagsinput .not_valid {
 .sidebar-collapsed .nav-list > li.open:hover > a    {color: #fff;}
 
 .navbar {
-    background: #2980b9;
+    background: #428BCA;
 }
 .flaty-nav > li > a > .badge {
     /*border-color: #58b1fc;*/
-    border-color: #2980b9;
+    border-color: #428BCA;
     
 }
 .navbar .navbar-btn,
@@ -4750,7 +4750,7 @@ div.tagsinput .not_valid {
 .nav-list .search-form,
 .nav-list .search-pan input,
 #nav-horizontal.nav-xs > li > a,
-.nav-list > li > a                                  {background-color: #2980b9;}    /* Sidebar Background */
+.nav-list > li > a                                  {background-color: #428BCA;}    /* Sidebar Background */
 .nav-list .search-form:hover,
 .nav-list .search-form:hover .search-pan input,
 .nav-list > li.open > a,
@@ -4773,7 +4773,7 @@ div.tagsinput .not_valid {
 .nav-list > li > a:hover                            {background-color: #1E77B2!important;}
 #nav-horizontal.nav-xs > li .dropdown-menu,
 #nav-horizontal.nav-xs > li .dropdown-navbar > li:hover,
-.nav-list > li .submenu                             {background-color: #1E77B2!important;}    /* Submenu Background */
+.nav-list > li .submenu                             {background-color: #428BCA!important;}    /* Submenu Background */
 #sidebar-collapse > [class*="fa-"],
 #nav-horizontal.nav-xs > li .dropdown-menu > li > a:focus,
 #nav-horizontal.nav-xs > li .dropdown-menu > li > a:hover,
@@ -4784,22 +4784,21 @@ div.tagsinput .not_valid {
 .nav-list > li .submenu > li > ul > li.active > a,
 .nav-list > li .submenu > li > a:focus,
 .nav-list > li .submenu > li > a:hover,
-.nav-list > li .submenu > li.active > a             {background-color: #2886C5;}    /* Submenu Hover */
+.nav-list > li .submenu > li.active > a             {background-color: #1E77B2;}    /* Submenu Hover */
 .nav-list > li.active > a:after                     {border-right-color: #e9f0f9;}
 .login-page:before,
 .error-page:before,
 #main-content                                       {background: #e9f0f9;}          /* Content Background */
 
 .box > .box-title {
-    background-color: #34495e;
+    background-color: #b6d1f2;
     text-shadow: 0 1px 0 #aecef4;
-    opacity: 0.7;
 }
 
 /***
 - Namely Skins
 ***/
-.skin-red .navbar                                 {  background: #ff6f6f;}
+.skin-red .navbar                                 {background: #ff6f6f;}
 .skin-red .flaty-nav > li > a > .badge            {border-color: #ff6f6f;}
 .skin-red .navbar-btn,
 .skin-red .navbar-btn:hover,
@@ -5984,46 +5983,46 @@ div.tagsinput .not_valid {
    Navbar
 ======================================================== */
 .navbar-default {
-	background-color: #f8f8f8;
-	position: relative;
-	min-height: 50px;
-	height: auto;
-	z-index: 0;
-	margin-bottom: 20px;
-	border: 1px solid #e7e7e7;
+  background-color: #f8f8f8;
+  position: relative;
+  min-height: 50px;
+  height: auto;
+  z-index: 0;
+  margin-bottom: 20px;
+  border: 1px solid #e7e7e7;
 }
 .navbar-default .navbar-brand {
-	color: #777;
-	font-size: 18px;
-	padding: 15px 15px;
-	min-width: 0;
-	height: auto;
+  color: #777;
+  font-size: 18px;
+  padding: 15px 15px;
+  min-width: 0;
+  height: auto;
 }
 .navbar-default  .navbar-collapse {
-	padding-right: 15px;
-	padding-left: 15px;
-	border-top: 1px solid #e7e7e7;
-	-webkit-overflow-scrolling: touch;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-top: 1px solid #e7e7e7;
+  -webkit-overflow-scrolling: touch;
 }
 .navbar-default  .navbar-nav {
-	margin: 7.5px -15px!important;
+  margin: 7.5px -15px!important;
 }
 .navbar-default .navbar-nav > li > a {
-	color: #777;
+  color: #777;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-	color: #333;
-	background-color: transparent;
+  color: #333;
+  background-color: transparent;
 }
 .navbar-default .dropdown-menu > li:hover {
-	background-color: transparent;
+  background-color: transparent;
 }
 @media (min-width: 768px)
 {
-	.navbar-default  .navbar-nav {
-		margin: 0!important;
-	}
+  .navbar-default  .navbar-nav {
+    margin: 0!important;
+  }
 }
 
 /*

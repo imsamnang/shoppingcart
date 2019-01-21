@@ -7,6 +7,7 @@
           <span class="text"> Dashboard</span>
         </a>
       </li>
+      
       <li class="mm_products">
         <a class="dropmenu" href="#">
           <i class="fa fa-barcode"></i>
@@ -75,7 +76,6 @@
           </li>          
         </ul>
       </li>
-
       <li class="mm_loans ">
         <a class="dropmenu" href="#">
           <i class="fa fa-heart"></i>

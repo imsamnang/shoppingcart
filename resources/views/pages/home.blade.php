@@ -23,49 +23,49 @@
   {{-- box-section-top --}}
 
   {{-- block-service --}}
-    @include('includes.front.block_service')
+    {{-- @include('includes.front.block_service') --}}
   {{-- block-service --}}
 
   {{-- Best Sallers --}}
-    @include('includes.front.best_saller')
+    {{-- @include('includes.front.best_saller') --}}
   {{-- Best Sallers --}}
 
     <div class="clearfix" style="background-color: #eeeeee;margin-bottom: 40px; padding-top:30px;">
       <!-- block -floor -products / floor 1 :Fashion-->
-        @include('includes.front.fashion')
+        {{-- @include('includes.front.fashion') --}}
       <!-- block -floor -products / floor 1 :Fashion-->
 
       {{-- Sports --}}
-        @include('includes.front.sports')
+        {{-- @include('includes.front.sports') --}}
       {{-- Sports --}}
 
       {{-- Electronics --}}
-        @include('includes.front.electronic')
+        {{-- @include('includes.front.electronic') --}}
       {{-- Electronics --}}
 
       {{-- Digital --}}
-        @include('includes.front.digital')
+        {{-- @include('includes.front.digital') --}}
       {{-- Digital --}}
 
       {{-- Fornitures --}}
-        @include('includes.front.furniture')
+        {{-- @include('includes.front.furniture') --}}
       {{-- Fornitures --}}
 
       {{-- jewelry --}}
-        @include('includes.front.jewelry')
+        {{-- @include('includes.front.jewelry') --}}
       {{-- jewelry --}}
 
       <!-- Banner -->
-        @include('includes.front.banner')
+        {{-- @include('includes.front.banner') --}}
       <!-- Banner -->
     </div>
 
   <!-- block  showcase-->
-    @include('includes.front.showcase')
+    {{-- @include('includes.front.showcase') --}}
   <!-- block  showcase-->
 
   <!-- block  hot categories-->
-    @include('includes.front.hot_categories')
+    {{-- @include('includes.front.hot_categories') --}}
   <!--block  hot categories-->
 @endsection
 

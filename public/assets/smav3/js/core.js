@@ -408,7 +408,7 @@ $(document).ready(function() {
       $(oldt).hide();
       //$(newt).hide().fadeIn('slow');
       $(newt).hide().slideDown('slow');
-  });
+    });
     $('.dropdown').on('show.bs.dropdown', function(e){
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown('fast');
     });
